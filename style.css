@@ -1,0 +1,497 @@
+body{
+margin:0;
+font-family:'Kanit', sans-serif;
+}
+
+/* HEADER */
+.header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 40px;
+background:#2c6ba379;
+color:white;
+}
+
+.menu a{
+margin-left:25px;
+color:white;
+text-decoration:none;
+}
+
+/* HERO */
+.hero{
+height:100vh;
+
+/* ⭐ ใส่ gif */
+background:url("../assets/sea.gif") center center/cover no-repeat;
+
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+color:white;
+position:relative;
+}
+
+/* ⭐ ทำ overlay มืดนิดเพื่อให้อ่านตัวหนังสือได้ */
+.hero::before{
+content:"";
+position:absolute;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.35);
+top:0;
+left:0;
+}
+
+.hero-content{
+position:relative;
+z-index:2;
+}
+
+.start-btn{
+margin-top:20px;
+padding:16px 45px;
+font-size:20px;
+border:none;
+border-radius:40px;
+background:linear-gradient(180deg,#ffb347,#ff8c00);
+color:white;
+cursor:pointer;
+font-family:'Kanit', sans-serif;
+font-weight:600;
+
+box-shadow:0 8px 0 #cc6f00;
+transition:.2s;
+}
+
+/* เอฟเฟค hover */
+.start-btn:hover{
+transform:translateY(2px);
+box-shadow:0 5px 0 #cc6f00;
+}
+
+/* เอฟเฟคกด */
+.start-btn:active{
+transform:translateY(6px);
+box-shadow:0 2px 0 #cc6f00;
+}
+
+.amper-area{
+height:calc(100vh - 70px);
+background:url("assets/bg.gif") center/cover no-repeat;
+display:flex;
+justify-content:center;
+align-items:center;
+position:relative;
+}
+
+/* FEATURES */
+.features{
+padding:60px;
+text-align:center;
+background:#f4f8fb;
+}
+
+.feature-grid{
+display:flex;
+justify-content:center;
+gap:30px;
+margin-top:30px;
+}
+
+.card{
+background:white;
+padding:25px;
+border-radius:15px;
+width:250px;
+box-shadow:0 5px 15px rgba(255, 255, 255, 0);
+}
+
+/* PRIMARY */
+.primary{
+display:flex;
+padding:60px;
+align-items:center;
+}
+
+.primary .image{
+flex:1;
+height:300px;
+background:#cce5ff;
+border-radius:20px;
+}
+
+.primary .text{
+flex:1;
+padding:40px;
+}
+
+/* SECONDARY */
+.secondary{
+display:flex;
+padding:60px;
+background:#f4f8fb;
+align-items:center;
+}
+
+.secondary .image{
+flex:1;
+height:300px;
+background:#cce5ff;
+border-radius:20px;
+}
+
+.secondary .text{
+flex:1;
+padding:40px;
+}
+
+/* CTA */
+.cta{
+text-align:center;
+padding:70px;
+background:#2c6ca3;
+color:white;
+}
+
+.cta-btn{
+margin-top:20px;
+padding:16px 45px;
+font-size:20px;
+border:none;
+border-radius:40px;
+background:linear-gradient(180deg,#ffb347,#ff8c00);
+color:white;
+cursor:pointer;
+font-family:'Kanit', sans-serif;
+font-weight:600;
+
+box-shadow:0 8px 0 #cc6f00;
+transition:.2s;
+}
+
+/* เอฟเฟค hover */
+.cta-btn:hover{
+transform:translateY(2px);
+box-shadow:0 5px 0 #cc6f00;
+}
+
+/* เอฟเฟคกด */
+.cta-btn:active{
+transform:translateY(6px);
+box-shadow:0 2px 0 #cc6f00;
+}
+
+/* FOOTER */
+.footer{
+background:#1b3e5a;
+color:white;
+text-align:center;
+padding:20px;
+}
+
+
+.mascot-ui{
+position:fixed;
+right:20px;
+bottom:0;
+z-index:999999;
+animation:mascotEnter .8s ease;
+}
+
+.mascot-ui img{
+width:100px;
+filter:drop-shadow(0 10px 12px rgba(0,0,0,.35));
+}
+
+/* speech bubble */
+.mascot-text{
+position:absolute;
+right:80px;
+bottom:130px;
+background:white;
+padding:12px 16px;
+border-radius:20px;
+border:3px solid #2c3e50;
+font-size:15px;
+width:190px;
+box-shadow:0 10px 18px rgba(0,0,0,.25);
+animation:textPop .8s ease;
+}
+
+/* หาง */
+.mascot-text::after{
+content:"";
+position:absolute;
+right:-12px;
+bottom:25px;
+border-width:12px;
+border-style:solid;
+border-color:transparent transparent transparent white;
+}
+
+/* เอฟเฟคเข้าของมาสคอส */
+@keyframes mascotEnter{
+from{
+transform:translateY(200px);
+opacity:0;
+}
+to{
+transform:translateY(0);
+opacity:1;
+}
+}
+
+/* เอฟเฟคข้อความเด้ง */
+@keyframes textPop{
+0%{transform:scale(.5); opacity:0;}
+70%{transform:scale(1.1);}
+100%{transform:scale(1);}
+}
+
+.guide-ui{
+position:fixed;
+right:25px;
+bottom:10px;
+z-index:999999;
+}
+
+.guide-ui img{
+width:120px;
+display:block;
+filter:drop-shadow(0 12px 16px rgba(0,0,0,.35));
+}
+
+/* กล่องคำพูด */
+.guide-bubble{
+position:absolute;
+right:85px;
+bottom:130px;
+background:linear-gradient(#ffffff7a);
+padding:16px 20px;
+border-radius:25px;
+border:3px solid #3b4b5c00;
+font-size:16px;
+width:150px;
+box-shadow:0 12px 20px rgba(0,0,0,.25);
+}
+
+/* หาง */
+.guide-bubble::after{
+content:"";
+position:absolute;
+right:-14px;
+bottom:28px;
+border-width:14px;
+border-style:solid;
+border-color:transparent transparent transparent #f3f6fa00;
+}
+
+.header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 40px;
+background:#074985;
+color:white;
+}
+
+.logo{
+font-size:22px;
+font-weight:bold;
+}
+
+.menu a{
+margin-left:25px;
+color:white;
+text-decoration:none;
+font-size:18px;
+}
+
+.map-area{
+height:calc(100vh - 70px);
+background-color: #dfefff;
+/* background:url("assets/bg.gif") center/cover no-repeat; */
+display:flex;
+justify-content:center;
+align-items:center;
+position:relative;
+}
+
+
+
+/* layer มืด */
+.map-area::before{
+content:"";
+position:absolute;
+width:100%;
+height:100%;
+background:rgba(0, 0, 0, 0);
+top:0;
+left:0;
+}
+
+/* ให้แผนที่ลอยขึ้นมา */
+#mapBox{
+position:relative;
+z-index:2;
+}
+
+body{
+margin:0;
+font-family:'Kanit',sans-serif;
+background:#eaf3ff;
+}
+
+.header{
+display:flex;
+justify-content:space-between;
+padding:15px 40px;
+background: linear-gradient(to bottom, #0084ff, #015698);
+color:white;
+}
+
+.menu a{
+margin-left:20px;
+color:white;
+text-decoration:none;
+}
+
+.map-section{
+text-align:center;
+padding:40px;
+}
+
+.map-container{
+position:relative;
+width:900px;
+margin:auto;
+}
+
+object{
+width:100%;
+}
+
+
+/* ⭐ กล่องกลางจอ */
+.mapWrapper{
+width:100%;
+height:calc(100vh - 70px);
+display:flex;
+justify-content:center;
+align-items:center;
+overflow:hidden;
+}
+
+.mapBox{
+width:90vw;
+height:90vh;
+position:relative;
+display:flex;
+justify-content:center;
+align-items:center;
+}
+
+#songkhlaMap{
+width:100%;
+height:100%;
+object-fit:contain;
+transition:.4s;
+transform-origin:center center;
+}
+
+/* อำเภอ */
+#songkhlaMap path{
+fill:#0040ff;
+stroke:rgb(255, 255, 255);
+stroke-width:2;
+cursor:pointer;
+transition:.2s;
+}
+
+#songkhlaMap path:hover{
+fill:#f4ff5a;
+}
+
+/* tooltip */
+#tooltip{
+position:absolute;
+background:white;
+padding:8px 14px;
+border-radius:10px;
+box-shadow:0 8px 20px rgba(0,0,0,.3);
+display:none;
+pointer-events:none;
+}
+
+/* ⭐ ปุ่ม zoom */
+.zoomUI{
+position:fixed;
+right:30px;
+bottom:40px;
+z-index:9999;   /* ⭐ สำคัญมาก */
+display:flex;
+flex-direction:column;
+gap:12px;
+}
+
+.zoomBtn{
+background:#0b4b8b;
+color:white;
+border:none;
+width:55px;
+height:55px;
+font-size:22px;
+border-radius:14px;
+cursor:pointer;
+box-shadow:0 8px 20px rgba(0,0,0,.35);
+}
+
+#tooltip{
+position:absolute;
+background:white;
+padding:8px 14px;
+border-radius:10px;
+box-shadow:0 8px 20px rgba(0,0,0,.3);
+display:none;
+pointer-events:none;
+font-size:14px;
+white-space:nowrap;
+}
+
+.title-img{
+  width: 800px;
+  max-width: 100%;
+  height: auto;
+}
+.hero-title img{
+   width: 450px;     /* ปรับขนาดตามที่ต้องการ */
+   height: auto;     /* อันนี้คือ ตัวล็อกอัตราส่วน */
+   max-width: 90%;
+   display: block;
+   margin: 0 auto;
+}
+
+.map-wrapper{
+    position: relative;
+    width: 100%;
+    height: auto;
+    background: #fff;
+}
+
+#map{
+    width: 100%;
+    height: 100%;
+}
+
+/* ⭐ โลโก้ลอยนิ่ง */
+.floating-logo{
+    position: absolute;
+    top: 45px;
+    left: 40px;
+    width: 300px;
+    z-index: 9999;
+    pointer-events: none;   /* กันบังการคลิกแผนที่ */
+}

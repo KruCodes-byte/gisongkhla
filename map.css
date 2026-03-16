@@ -1,0 +1,83 @@
+body{
+margin:0;
+font-family:Kanit;
+background:#eaf3ff;
+overflow:hidden;
+}
+
+/* header */
+.header{
+background:#0b4b8b;
+color:white;
+padding:15px 40px;
+display:flex;
+justify-content:space-between;
+}
+
+/* ⭐ center map ทั้งจอ */
+.mapWrapper{
+height:calc(100vh - 70px);
+display:flex;
+justify-content:center;
+align-items:center;
+}
+
+/* ⭐ layer zoom */
+.mapBox{
+width:70%;
+max-width:1100px;
+transition:.25s;
+position:relative;
+}
+
+/* svg */
+#songkhlaMap{
+width:100%;
+height:auto;
+}
+
+/* district */
+#songkhlaMap path{
+fill:#3f6fd1;
+stroke:white;
+stroke-width:2;
+cursor:pointer;
+transition:.25s;
+}
+
+#songkhlaMap path:hover{
+fill:#ff9800;
+}
+
+/* tooltip */
+#tooltip{
+position:absolute;
+background:white;
+padding:8px 14px;
+border-radius:10px;
+box-shadow:0 8px 20px rgba(0,0,0,.3);
+display:none;
+pointer-events:none;
+}
+
+/* ⭐ zoom buttons */
+.zoomUI{
+position:fixed;
+right:30px;
+bottom:40px;
+display:flex;
+flex-direction:column;
+gap:10px;
+}
+
+.zoomBtn{
+background:#0b4b8b;
+color:white;
+border:none;
+width:50px;
+height:50px;
+font-size:22px;
+border-radius:12px;
+cursor:pointer;
+box-shadow:0 6px 15px rgba(0,0,0,.3);
+}

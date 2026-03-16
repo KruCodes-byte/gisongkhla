@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<title>Soft Power Songkhla</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+
+/* RESET */
+body{
+margin:0;
+font-family:'Kanit', sans-serif;
+}
+
+/* ================= HEADER ================= */
+.header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 40px;
+background: linear-gradient(to bottom, #0084ff, #015698);
+color:white;
+}
+
+.logo{
+font-size:22px;
+font-weight:bold;
+}
+
+.menu a{
+margin-left:25px;
+color:white;
+text-decoration:none;
+font-size:18px;
+}
+
+/* ================= HERO GIF ================= */
+.hero{
+height:100vh;
+background:url("assets/112122.gif") center/cover no-repeat;
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+text-align:center;
+color:white;
+position:relative;
+}
+
+.hero-logo{
+transform: translateY(-120px);  
+z-index:2;
+}
+
+.hero-text{
+transform: translateY(-300px);   
+z-index:2;
+}
+.start-btn{
+margin-top:10px;
+padding:15px 40px;
+font-size:20px;
+border-radius:40px;
+background:#ff9800;
+margin-top: -5px; 
+}
+
+/* ================= FEATURES ================= */
+.features{
+padding:110px;
+text-align:center;
+background:#f4f8fb;
+background:url("assets/จุดเด่นของเกม2.jpg") center/cover no-repeat;
+
+align-items:flex-start;
+justify-content:center;
+}
+
+.feature-grid{
+display:flex;
+justify-content:center;
+gap:30px;
+margin-top:30px;
+}
+
+.card{
+background:white;
+padding:25px;
+border-radius:15px;
+width:260px;
+box-shadow:0 5px 15px rgba(0,0,0,.1);
+}
+
+/* ================= PRIMARY ================= */
+.primary{
+display:flex;
+background:#f4f8fb;
+background:url("assets/เรียนรู้สินค้าGIพื้นหลัง2.jpg") center/cover no-repeat;
+
+padding:70px;
+align-items:center;
+}
+
+.primary .image{
+flex:1;
+height:300px;
+background:#cce5ffb5;
+border-radius:20px;
+}
+
+.primary .text{
+flex:1;
+padding:40px;
+}
+
+/* ================= SECONDARY ================= */
+.secondary{
+display:flex;
+padding:70px;
+background:#f4f8fb;
+background:url("assets/ผจญภัยในเกม2.jpg") center/cover no-repeat;
+align-items:center;
+}
+
+.secondary .image{
+flex:1;
+height:300px;
+background:#cce5ff;
+border-radius:20px;
+}
+
+.secondary .text{
+flex:1;
+padding:40px;
+}
+
+/* ================= CTA ================= */
+.cta{
+text-align:center;
+padding:80px;
+background:#2c6ca3;
+color:white;
+}
+
+.cta-btn{
+margin-top:20px;
+padding:15px 40px;
+font-size:20px;
+border:none;
+border-radius:40px;
+background:#ff9800;
+color:white;
+cursor:pointer;
+}
+
+/* ================= FOOTER ================= */
+.footer{
+background:#1b3e5a;
+color:white;
+text-align:center;
+padding:100px;
+    
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header class="header">
+<div class="logo">SoftPower Songkhla</div>
+
+<nav class="menu">
+<a href="#">หน้าหลัก</a>
+<a href="map.html">แผนที่</a>
+<a href="#">ข้อมูลทั่วไป</a>
+<a href="#">ติดต่อเรา</a>
+<a href="#">โปรไฟล์</a>
+</nav>
+</header>
+
+<!-- HERO GIF -->
+<section class="hero">
+
+    <div class="hero-logo">
+        <img src="assets/โลโก้ข้อความ2.png" class="title-img">
+    </div>
+
+    <div class="hero-text">
+        <p>เรียนรู้ผ่านการผจญภัยในโลกเกม</p>
+
+        <button class="start-btn"
+        onclick="location.href='map.html'">
+        เริ่มต้นการผจญภัย
+        </button>
+    </div>
+
+</section>
+
+<!-- FEATURES -->
+<section class="features">
+
+
+<div class="feature-grid">
+
+<div class="card">
+<h3>เรียนรู้ผ่านเกม</h3>
+<p>เนื้อหา Soft Power ในรูปแบบเกมผจญภัย</p>
+</div>
+
+<div class="card">
+<h3>แผนที่ Interactive</h3>
+<p>สำรวจจังหวัดและอำเภอได้จริง</p>
+</div>
+
+<div class="card">
+<h3>สะสมคะแนน</h3>
+<p>ปลดล็อกด่านและรับเกียรติบัตร</p>
+</div>
+
+</div>
+</section>
+
+<!-- PRIMARY CONTENT -->
+<section class="primary">
+
+<div class="text">
+<h2></h2>
+<p>
+
+</p>
+</div>
+
+<div class="image"></div>
+
+</section>
+
+<!-- SECONDARY CONTENT -->
+<section class="secondary">
+
+<div class="image"></div>
+
+<div class="text">
+<h2></h2>
+<p>
+
+</p>
+</div>
+
+</section>
+
+<!-- CTA -->
+<section class="cta">
+
+<h2>พร้อมเริ่มการผจญภัยแล้วหรือยัง?</h2>
+
+<button class="cta-btn"
+onclick="location.href='map.html'">
+เริ่มเล่นเกมตอนนี้
+</button>
+
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+<div>
+<h1>ผู้จัดทำ</h1>
+<p>นายศักรินทร์ บุตรดำ<br>
+นายเมธวิน ชูอินทร์<br>
+นายนริศร์ สูละ<br>
+นายคีราวัตร์ อินทร์คง<br>
+นายณัฐพงษ์ ชินดำรงทรัพย์<br>
+นายณัฐวุฒิ สายกี้เส้ง</p>
+<p>คณะศึกษาศาสตร์ สาขาวิชาการศึกษา วิชาเอกเทคโนโลยีและสื่อสารการศึกษา <br> มหาวิทยาลัยทักษิณ วิทยาเขตสงขลา</p>
+</div>
+
+<div>
+<h3>อาจารย์ที่ปรึกษา</h3>
+<p>อาจารย์เพ็ญนภา สุวรรณวงศ์</p>
+
+<p>© 2026 Soft Power Songkhla Learning Game</p>
+</div>
+</footer>
+
+<!-- ⭐ MASCOT FLOAT -->
+<div style="
+position:fixed;
+right:25px;
+bottom:0;
+z-index:9999999;
+">
+
+   <div class="guide-ui">
+
+    <div class="guide-bubble">
+        <span id="guideText"></span>
+    </div>
+
+    <img src="assets/M2.png">
+
+</div>
+<script>
+const text = "กดปุ่มเริ่มการผจญภัย เพื่อเข้าสู่บนเรียน";
+let i = 0;
+
+function typeEffect(){
+    if(i < text.length){
+        document.getElementById("guideText").innerHTML += text.charAt(i);
+        i++;
+        setTimeout(typeEffect, 40);
+    }
+}
+
+typeEffect();
+</script>
+
+</body>
+
+</html>
