@@ -450,15 +450,21 @@ box-shadow:0 8px 20px rgba(0,0,0,.35);
 }
 
 #tooltip{
-position:absolute;
-background:white;
-padding:8px 14px;
-border-radius:10px;
-box-shadow:0 8px 20px rgba(0,0,0,.3);
-display:none;
-pointer-events:none;
-font-size:14px;
-white-space:nowrap;
+    position:fixed;
+    display:none;
+    pointer-events:none;
+    z-index:9999;
+
+    background:#fff;
+    padding:12px;
+    border-radius:20px;
+    box-shadow:0 25px 60px rgba(0,0,0,.35);
+}
+
+#tooltip img{
+    width:180px;
+    border-radius:12px;
+    display:block;
 }
 
 .title-img{

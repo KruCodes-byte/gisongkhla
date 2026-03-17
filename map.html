@@ -2,7 +2,7 @@
 <html lang="th">
 <head>
 <meta charset="UTF-8">
-<title>GI Songkhla Explorer</title>
+<title>Songkhla Map</title>
 <link rel="stylesheet" href="style.css">
 <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
@@ -60,7 +60,9 @@
 
 </svg>
 
-<div id="tooltip"></div>
+<div id="tooltip">
+   <img id="tooltipImg">
+</div>
 
 </div>
 
@@ -73,45 +75,102 @@
 
 <script>
 
-const tooltip = document.getElementById("tooltip");
+const tooltip = document.getElementById("tooltip")
+const tooltipImg = document.getElementById("tooltipImg")
 
 const district = {
-Hat_Yai:{name:"อำเภอหาดใหญ่",gi:5,page:"hatyai.html"},
-Mueang:{name:"อำเภอเมือง",gi:4,page:"muang.html"},
-Sadao:{name:"อำเภอสะเดา",gi:3,page:"sadao.html"}
-};
+Hat_Yai:{
+ page:"hatyai.html",
+ img:"img/GIอำเภอหาดใหญ่.png"
+},
+Mueang:{
+ page:"muang.html",
+ img:"img/GIอำเภอเมืองสงขลา.png"
+},
+Krasae_Sin:{
+ page:"Krasae_Sin.html",
+ img:"img/GIอำเภอกระแสสินธุ์.png"
+},
+Chana:{
+ page:"Chana.html",
+ img:"img/GIอำเภอจะนะ.png"
+},
+Ranot:{
+ page:"Ranot.html",
+ img:"img/GIอำเภอระโนด.png"
+},
+Sathing_Phra:{
+ page:"Sathing_Phra.html",
+ img:"img/GIอำเภอสทิงพระ.png"
+},
+Singhanakhon:{
+ page:"Singhanakhon.html",
+ img:"img/GIอำเภอสิงหนคร.png"
+},
+Khlong_Hoi_Khong:{
+ img:"img/อำเภอคลองหอยโข่ง.png"
+},
+Khuan_Niang:{
+ img:"img/อำเภอควนเนียง.png"
+},
+Thepha:{
+ img:"img/อำเภอเทพา.png"
+},
+Na_Thawi:{
+ img:"img/อำเภอนาทวี.png"
+},
+Na_Mom:{
+ img:"img/อำเภอนาหม่อม.png"
+},
+Bang_Klam:{
+ img:"img/อำเภอบางกล่ำ.png"
+},
+Rattaphum:{
+ img:"img/อำเภอรัตภูมิ.png"
+},
+Sadao:{
+ img:"img/อ.png"
+},
+Saba_Yoi:{
+ img:"img/อ.png"
+}
+}
 
 for(let id in district){
 
-let el = document.getElementById(id);
+let el = document.getElementById(id)
+if(!el) continue
 
+/* ⭐ hover */
 el.addEventListener("mousemove",(e)=>{
-tooltip.style.display="block";
-tooltip.style.left=e.pageX+"px";
-tooltip.style.top=e.pageY+"px";
-tooltip.innerHTML =
-district[id].name+"<br>GI "+district[id].gi;
-});
 
+tooltip.style.display="block"
+tooltipImg.src = district[id].img
+
+tooltip.style.left = (e.clientX + 20) + "px"
+tooltip.style.top  = (e.clientY - 80) + "px"
+
+})
+
+/* ⭐ ออกจาก */
 el.addEventListener("mouseout",()=>{
-tooltip.style.display="none";
-});
+tooltip.style.display="none"
+})
 
+/* ⭐ click */
 el.addEventListener("click",()=>{
 
-el.style.transformOrigin="center";
-el.style.transform="scale(1.4)";
+el.style.transition=".4s"
+el.style.transformOrigin="center"
+el.style.transform="scale(1.4)"
 
 setTimeout(()=>{
-window.location.href = district[id].page;
-},500);
+window.location.href = district[id].page
+},400)
 
-
-});
+})
 
 }
-/* ⭐⭐⭐ ZOOM MAP ⭐⭐⭐ */
-
 let zoom = 1
 const mapBox = document.querySelector(".mapBox")
 
@@ -145,6 +204,7 @@ document.querySelector(".mapWrapper").addEventListener("wheel",(e)=>{
 
 
 </script>
+
 </section>
 </body>
 </html>
