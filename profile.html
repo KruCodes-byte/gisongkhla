@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="profile" data-auth-required="true">
+  <header class="site-header">
+    <a class="brand" href="index.html">GI Songkhla Explorer</a>
+    <nav class="site-nav">
+      <a href="index.html" data-nav="home">หน้าแรก</a>
+      <a href="map.html" data-nav="map">แผนที่</a>
+      <a href="about.html" data-nav="about">About</a>
+      <a href="certificate.html" data-nav="certificate">เกียรติบัตร</a>
+    </nav>
+    <a class="profile-chip" href="profile.html">
+      <span data-profile-name>โปรไฟล์</span>
+    </a>
+  </header>
+
+  <main class="page-shell">
+    <section class="hero">
+      <article class="district-hero">
+        <span class="eyebrow">7. Profile</span>
+        <h1>โปรไฟล์ผู้ใช้และความคืบหน้า</h1>
+        <p>ดูข้อมูลผู้ใช้ คะแนนรวม เกมที่กดเข้า และเกียรติบัตร พร้อมปุ่มออกจากระบบ</p>
+      </article>
+    </section>
+
+    <section class="section">
+      <div class="profile-layout">
+        <article class="profile-card">
+          <div class="profile-head">
+            <div class="avatar-shell" data-avatar></div>
+            <div>
+              <h2 data-profile-full-name></h2>
+              <p data-profile-email></p>
+            </div>
+          </div>
+          <div class="summary-grid">
+            <div class="summary-card">
+              <span class="eyebrow">คะแนนรวม</span>
+              <strong class="metric-value" data-profile-total-score></strong>
+            </div>
+            <div class="summary-card">
+              <span class="eyebrow">เกมที่กดเข้า</span>
+              <strong class="metric-value" data-profile-games></strong>
+            </div>
+            <div class="summary-card">
+              <span class="eyebrow">เกียรติบัตร</span>
+              <strong class="metric-value" data-profile-certificate></strong>
+            </div>
+          </div>
+          <div class="hero-actions">
+            <a class="button button-secondary" href="map.html">กลับหน้าแผนที่</a>
+            <a class="button button-ghost" href="certificate.html" hidden data-certificate-link>ดูเกียรติบัตร</a>
+          </div>
+        </article>
+
+        <article class="profile-card">
+          <span class="eyebrow">ข้อมูลผู้ใช้</span>
+          <h2>แก้ไขข้อมูลโปรไฟล์</h2>
+          <form class="form-stack" data-profile-form>
+            <label class="field">
+              <span>ชื่อ-สกุล</span>
+              <input type="text" data-input-full-name>
+            </label>
+            <label class="field">
+              <span>Gmail</span>
+              <input type="email" data-input-email>
+            </label>
+            <label class="field">
+              <span>ลิงก์รูปโปรไฟล์</span>
+              <input type="url" data-input-avatar placeholder="https://...">
+            </label>
+            <div class="inline-actions">
+              <button class="button button-primary" type="submit">บันทึกข้อมูล</button>
+              <button class="button button-ghost" type="button" data-logout>ออกจากระบบ</button>
+            </div>
+          </form>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-card">
+        <span class="eyebrow">Progress Detail</span>
+        <h2>รายละเอียดความคืบหน้าแต่ละ GI</h2>
+        <ul class="profile-progress-list" data-profile-progress></ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="page-shell">
+      <div class="footer-card">
+        <div>
+          <h3>Profile + Progress</h3>
+          <p>หน้านี้รวมข้อมูลผู้ใช้ คะแนนรวม สถานะการกดเข้าเกม และลิงก์ไปยังเกียรติบัตรในที่เดียว</p>
+        </div>
+        <div>
+          <p>หากเชื่อม Supabase Auth แล้ว ข้อมูลชุดนี้สามารถ sync ตามผู้ใช้จริงได้ทันที</p>
+        </div>
+      </div>
+      <p class="footer-end">© <span data-current-year></span> GI Songkhla Explorer</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/data.js"></script>
+  <script src="js/supabase.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/site.js"></script>
+  <script src="js/profile-page.js"></script>
+</body>
+</html>

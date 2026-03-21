@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>หน้าข้อมูลอำเภอ</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="map" data-auth-required="true">
+  <header class="site-header">
+    <a class="brand" href="index.html">GI Songkhla Explorer</a>
+    <nav class="site-nav">
+      <a href="index.html" data-nav="home">หน้าแรก</a>
+      <a href="map.html" data-nav="map">แผนที่</a>
+      <a href="about.html" data-nav="about">About</a>
+      <a href="certificate.html" data-nav="certificate">เกียรติบัตร</a>
+    </nav>
+    <a class="profile-chip" href="profile.html">
+      <span data-profile-name>โปรไฟล์</span>
+    </a>
+  </header>
+
+  <main class="page-shell">
+    <section class="hero">
+      <article class="district-hero">
+        <span class="eyebrow" data-district-label></span>
+        <h1 data-district-title></h1>
+        <p data-district-subtitle></p>
+        <div class="district-hero-evolution" data-district-hero-evolution></div>
+        <div class="status-strip">
+          <div class="status-badge">
+            <span>เรียนรู้แล้ว</span>
+            <strong data-learning-status></strong>
+          </div>
+          <div class="status-badge">
+            <span>สอบแล้ว</span>
+            <strong data-score-status></strong>
+          </div>
+          <div class="status-badge">
+            <span>เข้าเกมแล้ว</span>
+            <strong data-game-status></strong>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <section class="section">
+      <div class="district-layout">
+        <article class="section-card">
+          <div class="section-head">
+            <div>
+              <h2>แผนที่จังหวัดสงขลาและ GI ของอำเภอนี้</h2>
+            </div>
+          </div>
+          <div class="district-map" data-district-map></div>
+          <ul class="point-list" data-point-list></ul>
+        </article>
+
+        <div class="gi-info-stack" data-gi-info-stack></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <div>
+          <h2>วิดีโอการเรียนรู้</h2>
+        </div>
+      </div>
+      <div class="video-grid" data-video-grid></div>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <div>
+          <h2>ทำกิจกรรมต่อจากตรงนี้</h2>
+        </div>
+      </div>
+      <div class="gi-action-grid" data-gi-actions></div>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">District Overview</span>
+          <h2>สถานะการเรียนรู้รายอำเภอ</h2>
+        </div>
+      </div>
+      <div class="track-status" data-track-status></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="page-shell">
+      <div class="footer-card">
+        <div>
+          <h3>Flow ของหน้าอำเภอ</h3>
+          <p>1. เข้าหน้าอำเภอเพื่อเปิดบทเรียน 2. กดเล่นเกมจากลิงก์ปลายทางโดยตรง 3. ทำข้อสอบ 10 ข้อ 4. กลับไปดูสถานะรายอำเภอ</p>
+        </div>
+        <div>
+          <p>หน้าอำเภอจะแสดงรูปสินค้า ข้อมูลย่อ และวิดีโอจาก YouTube ของแต่ละสินค้า GI ในอำเภอนั้นให้ดูต่อเนื่องในหน้าเดียว</p>
+        </div>
+      </div>
+      <p class="footer-end">© <span data-current-year></span> GI Songkhla Explorer</p>
+    </div>
+  </footer>
+
+  <div class="showcase-npc-guide district-page-npc" role="note" aria-label="ผู้ช่วยแนะนำหน้าอำเภอ">
+    <div
+      class="showcase-npc-bubble"
+      data-npc-message="ดูข้อมูลสินค้า GI ของอำเภอนี้ให้ครบ แล้วกดเล่นเกมหรือทำข้อสอบต่อได้จากด้านล่าง"
+      aria-live="polite"
+    >
+      <span class="showcase-npc-text" data-npc-text></span>
+      <span class="showcase-npc-caret" aria-hidden="true"></span>
+    </div>
+    <img class="showcase-npc-image" src="assets/2.png" alt="NPC หน้าอำเภอ">
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/data.js"></script>
+  <script src="js/evolution.js?v=20260321a"></script>
+  <script src="js/supabase.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/site.js"></script>
+  <script src="js/npc.js"></script>
+  <script src="js/district-page.js"></script>
+</body>
+</html>

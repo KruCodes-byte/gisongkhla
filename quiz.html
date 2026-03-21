@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ระบบข้อสอบ GI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="map" data-auth-required="true">
+  <header class="site-header">
+    <a class="brand" href="index.html">GI Songkhla Explorer</a>
+    <nav class="site-nav">
+      <a href="index.html" data-nav="home">หน้าแรก</a>
+      <a href="map.html" data-nav="map">แผนที่</a>
+      <a href="about.html" data-nav="about">About</a>
+      <a href="certificate.html" data-nav="certificate">เกียรติบัตร</a>
+    </nav>
+    <a class="profile-chip" href="profile.html">
+      <span data-profile-name>โปรไฟล์</span>
+    </a>
+  </header>
+
+  <main class="page-shell">
+    <section class="hero">
+      <article class="district-hero">
+        <h1 data-quiz-title></h1>
+        <p data-quiz-subtitle></p>
+        <div class="status-strip">
+          <div class="status-badge">
+            <span>คะแนนล่าสุด</span>
+            <strong data-last-score></strong>
+          </div>
+          <div class="status-badge">
+            <span>เกณฑ์เกียรติบัตร</span>
+            <strong>อย่างน้อย 80%</strong>
+          </div>
+          <div class="status-badge">
+            <span>จำนวนข้อ</span>
+            <strong>10 ข้อ</strong>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <section class="section">
+      <form class="form-stack" data-quiz-form>
+        <div class="form-stack" data-quiz-questions></div>
+        <div class="inline-actions">
+          <button class="button button-primary" type="submit">ส่งคำตอบและบันทึกคะแนน</button>
+          <a class="button button-ghost" href="map.html">กลับหน้าแผนที่</a>
+        </div>
+      </form>
+      <div class="result-panel" data-quiz-result hidden></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="page-shell">
+      <div class="footer-card">
+        <div>
+          <h3>การแสดงผลหลังสอบ</h3>
+          <p>เมื่อส่งคำตอบแล้ว ระบบจะบันทึกคะแนนและแสดงสถานะบนหน้าแผนที่ทันที</p>
+        </div>
+        <div>
+          <p>หากยังไม่ถึง 80% สามารถกลับมาทำแบบทดสอบของ GI เดิมซ้ำได้</p>
+        </div>
+      </div>
+      <p class="footer-end">© <span data-current-year></span> GI Songkhla Explorer</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/data.js"></script>
+  <script src="js/supabase.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/site.js"></script>
+  <script src="js/quiz-page.js"></script>
+</body>
+</html>

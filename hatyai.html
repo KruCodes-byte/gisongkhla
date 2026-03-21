@@ -2,29 +2,59 @@
 <html lang="th">
 <head>
 <meta charset="UTF-8">
-<title>Songkhla Map</title>
-<link rel="stylesheet" href="style.css">
-<link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600&display=swap" rel="stylesheet">
+<title>District Learning</title>
+<link rel="stylesheet" href="district.css">
+<link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600;800&display=swap" rel="stylesheet">
 </head>
-<strong>
-    
-</strong>
+
 <body>
 
-<header class="header">
-<div class="logo">SoftPower Songkhla</div>
-
-<nav class="menu">
-<a href="index.html">หน้าหลัก</a>
-<a href="map.html">แผนที่</a>
-<a href="#">ข้อมูลทั่วไป</a>
-<a href="#">ติดต่อเรา</a>
-<a href="#">โปรไฟล์</a>
-</nav>
+<header>
+    <div class="logo">GI Songkhla Explorer</div>
 </header>
 
+<section class="hero">
+    <h1>อำเภอเมืองสงขลา</h1>
+    <p>สำรวจ Soft Power และปลดล็อก GI</p>
+</section>
 
+<div class="container">
+
+    <!-- MAP -->
+    <h2>แผนที่อำเภอ</h2>
+    <div class="map">
+        <div class="point" style="top:40%;left:60%" onclick="showPlace('เกาะยอ')"></div>
+        <div class="point" style="top:70%;left:30%" onclick="showPlace('ทะเลสาบ')"></div>
+    </div>
+
+    <!-- GI -->
+    <h2>สินค้า GI</h2>
+
+    <div class="gi-grid" id="giGrid"></div>
+
+    <!-- VIDEO -->
+    <h2>วิดีโอการเรียนรู้</h2>
+
+    <div class="video-grid">
+        <iframe src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
+        <iframe src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
+        <iframe src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
+    </div>
+
+    <!-- QUIZ STATUS -->
+    <h2>สถานะการเรียนรู้ GI</h2>
+
+    <div class="status-box" id="statusBox"></div>
+
+    <div class="center">
+        <button class="start-btn" onclick="startQuiz()">
+            เริ่มทำข้อสอบ
+        </button>
+    </div>
 
 </div>
 
+<script src="district.js"></script>
+
 </body>
+</html>

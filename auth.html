@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>เข้าสู่ระบบ / สมัครสมาชิก</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="auth">
+  <header class="site-header">
+    <a class="brand" href="index.html">GI Songkhla Explorer</a>
+    <nav class="site-nav">
+      <a href="index.html" data-nav="home">หน้าแรก</a>
+      <a href="map.html" data-nav="map">แผนที่</a>
+      <a href="about.html" data-nav="about">About</a>
+      <a href="certificate.html" data-nav="certificate">เกียรติบัตร</a>
+    </nav>
+    <a class="profile-chip" href="auth.html">
+      <span data-profile-name>เข้าสู่ระบบ</span>
+    </a>
+  </header>
+
+  <main class="auth-shell">
+    <section class="auth-showcase">
+      <article class="auth-showcase-copy">
+        <span class="auth-kicker">WELCOME</span>
+        <img
+          class="auth-showcase-logo"
+          src="assets/โลโก้ข้อความ2.png"
+          alt="GI Songkhla Explorer"
+        >
+        <p>เข้าสู่ระบบเพื่อบันทึกความคืบหน้า คะแนนแบบทดสอบ และข้อมูลเกียรติบัตรของคุณไว้กับบัญชีจริง</p>
+      </article>
+
+      <article class="auth-panel-card">
+        <div class="auth-panel-head">
+          <span class="eyebrow">Account Access</span>
+          <h2 data-auth-title>Sign in</h2>
+          <p data-auth-caption>เข้าสู่ระบบเพื่อกลับไปยังเส้นทางการเรียนรู้ของคุณ</p>
+        </div>
+
+        <div class="auth-tabs">
+          <button class="auth-tab is-active" type="button" data-open-login>เข้าสู่ระบบ</button>
+          <button class="auth-tab" type="button" data-open-register>สมัครสมาชิก</button>
+        </div>
+
+        <div class="form-stack auth-form-wrap">
+          <div class="notice-banner is-error" data-auth-config-warning hidden>
+            Supabase Auth ยังไม่ได้ตั้งค่าใน `js/supabase.js`
+          </div>
+          <div class="notice-banner" data-auth-status hidden></div>
+
+          <button class="button button-ghost auth-google-button" type="button" data-google-auth>
+            ดำเนินการต่อด้วย Google
+          </button>
+
+          <form class="form-stack" data-login-form>
+            <label class="field">
+              <span>Gmail</span>
+              <input type="email" name="email" autocomplete="email" placeholder="you@example.com" required>
+            </label>
+            <label class="field">
+              <span>รหัสผ่าน</span>
+              <input type="password" name="password" autocomplete="current-password" placeholder="กรอกรหัสผ่าน" required>
+            </label>
+            <button class="button button-primary auth-submit" type="submit" data-login-submit>Sign in</button>
+          </form>
+
+          <form class="form-stack" data-register-form hidden>
+            <label class="field">
+              <span>ชื่อ-สกุล</span>
+              <input type="text" name="fullName" autocomplete="name" placeholder="ชื่อผู้ใช้งาน" required>
+            </label>
+            <label class="field">
+              <span>Gmail</span>
+              <input type="email" name="email" autocomplete="email" placeholder="you@example.com" required>
+            </label>
+            <label class="field">
+              <span>รหัสผ่าน</span>
+              <input type="password" name="password" autocomplete="new-password" placeholder="อย่างน้อย 6 ตัวอักษร" required>
+            </label>
+            <label class="field">
+              <span>ยืนยันรหัสผ่าน</span>
+              <input type="password" name="confirmPassword" autocomplete="new-password" placeholder="กรอกรหัสผ่านซ้ำ" required>
+            </label>
+            <button class="button button-primary auth-submit" type="submit" data-register-submit>Sign up</button>
+          </form>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/data.js"></script>
+  <script src="js/supabase.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/site.js"></script>
+  <script src="js/auth-page.js"></script>
+</body>
+</html>

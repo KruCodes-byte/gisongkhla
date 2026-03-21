@@ -1,323 +1,149 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
-<meta charset="UTF-8">
-<title>Soft Power Songkhla</title>
-<link rel="stylesheet" href="style.css">
-<link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600&display=swap" rel="stylesheet">
-<style>
-
-/* RESET */
-body{
-margin:0;
-font-family:'Kanit', sans-serif;
-}
-
-/* ================= HEADER ================= */
-.header{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:15px 40px;
-background: linear-gradient(to bottom, #0084ff, #015698);
-color:white;
-}
-
-.logo{
-font-size:22px;
-font-weight:bold;
-}
-
-.menu a{
-margin-left:25px;
-color:white;
-text-decoration:none;
-font-size:18px;
-}
-
-/* ================= HERO GIF ================= */
-.hero{
-height:100vh;
-background:url("assets/112122.gif") center/cover no-repeat;
-display:flex;
-flex-direction:column;
-align-items:center;
-justify-content:center;
-text-align:center;
-color:white;
-position:relative;
-}
-
-.hero-logo{
-transform: translateY(-120px);  
-z-index:2;
-}
-
-.hero-text{
-transform: translateY(-300px);   
-z-index:2;
-}
-.start-btn{
-margin-top:10px;
-padding:15px 40px;
-font-size:20px;
-border-radius:40px;
-background:#ff9800;
-margin-top: -5px; 
-}
-
-/* ================= FEATURES ================= */
-.features{
-padding:130px;
-text-align:center;
-background:#f4f8fb;
-background:url("assets/จุดเด่นของเกม2.jpg") center/cover no-repeat;
-
-align-items:flex-start;
-justify-content:center;
-}
-
-.feature-grid{
-display:flex;
-justify-content:center;
-gap:30px;
-margin-top:30px;
-}
-
-.card{
-background:white;
-padding:25px;
-border-radius:15px;
-width:260px;
-box-shadow:0 5px 15px rgba(0,0,0,.1);
-}
-
-/* ================= PRIMARY ================= */
-.primary{
-display:flex;
-background:#f4f8fb;
-background:url("assets/เรียนรู้สินค้าGIพื้นหลัง2.jpg") center/cover no-repeat;
-
-padding:70px;
-align-items:center;
-}
-
-.primary .image{
-flex:1;
-height:300px;
-background:#cce5ffb5;
-border-radius:20px;
-}
-
-.primary .text{
-flex:1;
-padding:40px;
-}
-
-/* ================= SECONDARY ================= */
-.secondary{
-display:flex;
-padding:70px;
-background:#f4f8fb;
-background:url("assets/ผจญภัยในเกม2.jpg") center/cover no-repeat;
-align-items:center;
-}
-
-.secondary .image{
-flex:1;
-height:300px;
-background:#cce5ff;
-border-radius:20px;
-}
-
-.secondary .text{
-flex:1;
-padding:40px;
-}
-
-/* ================= CTA ================= */
-.cta{
-text-align:center;
-padding:80px;
-background:#2c6ca3;
-color:white;
-}
-
-.cta-btn{
-margin-top:20px;
-padding:15px 40px;
-font-size:20px;
-border:none;
-border-radius:40px;
-background:#ff9800;
-color:white;
-cursor:pointer;
-}
-
-/* ================= FOOTER ================= */
-.footer{
-background:#1b3e5a;
-background:url("assets/คณะผู้จัดทำ2.jpg") center/cover no-repeat;
-color:white;
-text-align:center;
-padding:50px;
-    
-}
-
-</style>
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GI Songkhla Explorer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
+<body data-page="home">
+  <header class="site-header">
+    <a class="brand" href="index.html">GI Songkhla Explorer</a>
+    <nav class="site-nav">
+      <a href="index.html" data-nav="home">หน้าแรก</a>
+      <a href="map.html" data-nav="map">แผนที่</a>
+      <a href="about.html" data-nav="about">About</a>
+      <a href="certificate.html" data-nav="certificate">เกียรติบัตร</a>
+    </nav>
+    <a class="profile-chip" href="profile.html">
+      <span data-profile-name>โปรไฟล์</span>
+    </a>
+  </header>
 
-<body>
+  <main class="showcase-shell">
+    <section class="showcase-hero">
+      <div class="showcase-hero-center">
+        <img class="showcase-logo" src="assets/โลโก้ข้อความ2.png" alt="GI Songkhla Explorer">
+        <p class="showcase-hero-caption">เรียนรู้ผ่านการผจญภัยในโลกเกม</p>
+        <a class="button button-primary showcase-hero-button" href="map.html">เริ่มต้นการผจญภัย</a>
+      </div>
 
-<!-- HEADER -->
-<header class="header">
-<div class="logo">SoftPower Songkhla</div>
+      <div class="showcase-hero-foreground" aria-hidden="true">
+        <img src="assets/1.png" alt="">
+      </div>
+    </section>
 
-<nav class="menu">
-<a href="#">หน้าหลัก</a>
-<a href="map.html">แผนที่</a>
-<a href="#">ข้อมูลทั่วไป</a>
-<a href="#">ติดต่อเรา</a>
-<a href="#">โปรไฟล์</a>
-</nav>
-</header>
+    <section class="showcase-features">
+      <div class="showcase-section-head showcase-section-head-center">
+        <p class="showcase-overline"></p>
+        <h2>จุดเด่นของเกม</h2>
+      </div>
 
-<!-- HERO GIF -->
-<section class="hero">
+      <div class="showcase-feature-grid">
+        <article class="showcase-feature-card">
+          <span class="showcase-feature-mark">01</span>
+          <h3>เรียนรู้ผ่านเกม</h3>
+          <p>เนื้อหา Soft Power ถูกออกแบบให้อยู่ในรูปแบบที่สนุกและเข้าถึงง่ายมากขึ้น</p>
+        </article>
+        <article class="showcase-feature-card">
+          <span class="showcase-feature-mark">02</span>
+          <h3>แผนที่ Interactive</h3>
+          <p>สำรวจอำเภอและสินค้า GI ผ่านหน้าแผนที่ที่คลิก เลื่อน และติดตามสถานะได้จริง</p>
+        </article>
+        <article class="showcase-feature-card">
+          <span class="showcase-feature-mark">03</span>
+          <h3>สะสมคะแนน</h3>
+          <p>ปลดล็อกความคืบหน้า เก็บคะแนนจากข้อสอบ และตรวจเงื่อนไขเกียรติบัตรในระบบเดียว</p>
+        </article>
+      </div>
+    </section>
 
-    <div class="hero-logo">
-        <img src="assets/โลโก้ข้อความ2.png" class="title-img">
+    <section class="showcase-primary">
+      <div class="showcase-primary-copy">
+        <p class="showcase-overline"></p>
+        <h2>เรียนรู้สินค้า GI จังหวัดสงขลา</h2>
+        <p>ผู้เล่นจะได้สำรวจวัฒนธรรม อาหาร และภูมิปัญญาท้องถิ่น ผ่านข้อมูลอำเภอ วิดีโอ จุดสำคัญบนแผนที่ และแบบทดสอบ 10 ข้อในแต่ละเส้นทาง</p>
+        <div class="showcase-primary-tags">
+          <span>ประวัติ</span>
+          <span>ความสำคัญ</span>
+          <span>แหล่งผลิต</span>
+          <span>วิดีโอการเรียนรู้</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="showcase-secondary">
+      <div class="showcase-secondary-preview" aria-hidden="true">
+        <div class="showcase-preview-card">
+          <span class="showcase-preview-label">Quest Board</span>
+          <strong>Adventure Flow</strong>
+          <div class="showcase-preview-steps">
+            <span>Map</span>
+            <span>GI</span>
+            <span>Quiz</span>
+            <span>Cert</span>
+          </div>
+          <div class="showcase-preview-track"></div>
+        </div>
+      </div>
+      <div class="showcase-secondary-copy">
+        <p class="showcase-overline"></p>
+        <h2>ผจญภัยในโลกเกม RPG</h2>
+        <p>ตัวละครเดินทางสำรวจแผนที่ เก็บไอเท็ม และตอบคำถาม เพื่อเพิ่มพูนความรู้เกี่ยวกับ Soft Power ของสงขลา โดยหน้าเว็บนี้ทำหน้าที่เป็นจุดเริ่มต้นก่อนกดเข้าเกมภายนอก</p>
+      </div>
+    </section>
+
+    <section class="showcase-cta">
+      <p class="showcase-overline"></p>
+      <h2>พร้อมเริ่มการผจญภัยแล้วหรือยัง?</h2>
+      <a class="button button-primary" href="map.html">เริ่มเล่นเกมตอนนี้</a>
+    </section>
+  </main>
+
+  <footer class="site-footer showcase-footer">
+    <div class="showcase-footer-grid">
+      <section class="showcase-footer-team">
+        <p class="showcase-overline"></p>
+        <h2>ผู้จัดทำ</h2>
+        <ul class="showcase-team-list" data-home-developers></ul>
+        <div class="showcase-footer-meta">
+          <h3>อาจารย์ที่ปรึกษา</h3>
+          <p data-home-advisor></p>
+          <p data-home-university></p>
+        </div>
+      </section>
+
+      <section class="showcase-footer-brand">
+        <img class="showcase-footer-logo" src="assets/ชื่อ.png" alt="GI Songkhla Explorer">
+        <p>นวัตกรรมเว็บไซต์สื่อประสมเชิงปฏิสัมพันธ์เพื่อการเรียนรู้และสื่อสารอัตลักษณ์สินค้า GI ของจังหวัดสงขลาในรูปแบบที่เข้าถึงง่ายขึ้น</p>
+        <div class="showcase-footer-decor" aria-hidden="true">
+          <img class="showcase-footer-oldtown" src="assets/1.png" alt="">
+        </div>
+      </section>
     </div>
+    <p class="footer-end">&copy; <span data-current-year></span> GI Songkhla Explorer</p>
+  </footer>
 
-    <div class="hero-text">
-        <p>เรียนรู้ผ่านการผจญภัยในโลกเกม</p>
-
-        <button class="start-btn"
-        onclick="location.href='map.html'">
-        เริ่มต้นการผจญภัย
-        </button>
+  <div class="showcase-npc-guide" role="note" aria-label="ข้อความต้อนรับ">
+    <div
+      class="showcase-npc-bubble"
+      data-npc-message="ยินดีต้อนรับสู่ GI Songkhla Explorer เริ่มจากหน้าแผนที่เพื่อปลดล็อกทั้ง 5 เส้นทางได้เลย"
+      aria-live="polite"
+    >
+      <span class="showcase-npc-text" data-npc-text></span>
+      <span class="showcase-npc-caret" aria-hidden="true"></span>
     </div>
+    <img class="showcase-npc-image" src="assets/M2.png" alt="NPC ต้อนรับ">
+  </div>
 
-</section>
-
-<!-- FEATURES -->
-<section class="features">
-
-
-<div class="feature-grid">
-
-<div class="card">
-<h1>เรียนรู้ผ่านเกม</h1>
-<p>เนื้อหา Soft Power ในรูปแบบเกมผจญภัย</p>
-</div>
-
-<div class="card">
-<h1>แผนที่ Interactive</h1>
-<p>สำรวจจังหวัดและอำเภอได้จริง</p>
-</div>
-
-<div class="card">
-<h1>สะสมคะแนน</h1>
-<p>ปลดล็อกด่านและรับเกียรติบัตร</p>
-</div>
-
-</div>
-</section>
-
-<!-- PRIMARY CONTENT -->
-<section class="primary">
-
-<div class="text">
-<h2></h2>
-<p>
-
-</p>
-</div>
-
-<div class="image"></div>
-
-</section>
-
-<!-- SECONDARY CONTENT -->
-<section class="secondary">
-
-<div class="image"></div>
-
-<div class="text">
-<h2></h2>
-<p>
-
-</p>
-</div>
-
-</section>
-
-<!-- CTA -->
-<section class="cta">
-
-<h2>พร้อมเริ่มการผจญภัยแล้วหรือยัง?</h2>
-
-<button class="cta-btn"
-onclick="location.href='map.html'">
-เริ่มเล่นเกมตอนนี้
-</button>
-
-</section>
-
-<!-- FOOTER -->
-<footer class="footer">
-<div>
-<h1>ผู้จัดทำ</h1>
-<p>นายศักรินทร์ บุตรดำ<br>
-นายเมธวิน ชูอินทร์<br>
-นายนริศร์ สูละ<br>
-นายคีราวัตร์ อินทร์คง<br>
-นายณัฐพงษ์ ชินดำรงทรัพย์<br>
-นายณัฐวุฒิ สายกี้เส้ง</p>
-<p>คณะศึกษาศาสตร์ สาขาวิชาการศึกษา วิชาเอกเทคโนโลยีและสื่อสารการศึกษา <br> มหาวิทยาลัยทักษิณ วิทยาเขตสงขลา</p>
-</div>
-
-<div>
-<h3>อาจารย์ที่ปรึกษา</h3>
-<p>อาจารย์เพ็ญนภา สุวรรณวงศ์</p>
-
-<p>© 2026 Soft Power Songkhla Learning Game</p>
-</div>
-</footer>
-
-<!-- ⭐ MASCOT FLOAT -->
-<div style="
-position:fixed;
-right:25px;
-bottom:0;
-z-index:9999999;
-">
-
-   <div class="guide-ui">
-
-    <div class="guide-bubble">
-        <span id="guideText"></span>
-    </div>
-
-    <img src="assets/M2.png">
-
-</div>
-<script>
-const text = "กดปุ่มเริ่มการผจญภัย เพื่อเข้าสู่บนเรียน";
-let i = 0;
-
-function typeEffect(){
-    if(i < text.length){
-        document.getElementById("guideText").innerHTML += text.charAt(i);
-        i++;
-        setTimeout(typeEffect, 40);
-    }
-}
-
-typeEffect();
-</script>
-
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/data.js"></script>
+  <script src="js/supabase.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/site.js"></script>
+  <script src="js/home-page.js"></script>
 </body>
-
 </html>

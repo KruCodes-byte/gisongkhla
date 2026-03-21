@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>เกียรติบัตร GI Songkhla Explorer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="certificate" data-auth-required="true">
+  <header class="site-header">
+    <a class="brand" href="index.html">GI Songkhla Explorer</a>
+    <nav class="site-nav">
+      <a href="index.html" data-nav="home">หน้าหลัก</a>
+      <a href="map.html" data-nav="map">แผนที่</a>
+      <a href="about.html" data-nav="about">About</a>
+      <a href="certificate.html" data-nav="certificate">เกียรติบัตร</a>
+    </nav>
+    <a class="profile-chip" href="profile.html">
+      <span data-profile-name>โปรไฟล์</span>
+    </a>
+  </header>
+
+  <main class="showcase-shell certificate-showcase-shell">
+    <section class="section showcase-hero certificate-showcase-hero">
+      <div class="certificate-showcase-hero-grid">
+        <article class="certificate-showcase-copy">
+          <p class="showcase-overline"></p>
+          <h1>สรุปคะแนนและรับเกียรติบัตร</h1>
+          <p>ระบบจะตรวจว่าผู้เรียนเรียนครบ 5 GI แล้วหรือยัง คะแนนเฉลี่ยถึงเกณฑ์หรือไม่ และกดเข้าเกมของแต่ละ GI ครบก่อนออกเกียรติบัตรอัตโนมัติ</p>
+          <div class="showcase-primary-tags">
+            <span>เรียนครบ 5 GI</span>
+            <span>เฉลี่ยอย่างน้อย 80%</span>
+            <span>กดเข้าเกมครบทุก GI</span>
+          </div>
+        </article>
+
+        <aside class="certificate-showcase-panel">
+          <article class="certificate-condition-card">
+            <span>Step 01</span>
+            <strong>เก็บความคืบหน้าให้ครบ</strong>
+            <p>เริ่มเรียนรู้แต่ละเส้นทางและกลับไปตรวจสถานะบนหน้าแผนที่ได้ตลอด</p>
+          </article>
+          <article class="certificate-condition-card">
+            <span>Step 02</span>
+            <strong>ทำแบบทดสอบให้ผ่าน</strong>
+            <p>คะแนนสอบของทุก GI จะถูกสรุปรวมเป็นผลลัพธ์เดียวในหน้านี้</p>
+          </article>
+          <article class="certificate-condition-card">
+            <span>Step 03</span>
+            <strong>พิมพ์หรือบันทึกเป็น PDF</strong>
+            <p>เมื่อผ่านครบเงื่อนไขแล้ว ระบบจะเปิดโหมดพิมพ์เพื่อดาวน์โหลดเฉพาะใบเกียรติบัตร</p>
+          </article>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section showcase-features certificate-showcase-summary" data-certificate-summary-section>
+      <div class="showcase-section-head">
+        <div>
+          <p class="showcase-overline"></p>
+          <h2>ผลลัพธ์ทั้ง 5 GI</h2>
+        </div>
+      </div>
+
+      <div class="certificate-showcase-summary-grid">
+        <article class="certificate-summary-panel">
+          <ul class="certificate-summary" data-certificate-summary></ul>
+        </article>
+
+        <article class="empty-state certificate-empty-panel" data-certificate-empty>
+          <span class="eyebrow">ยังไม่ครบเงื่อนไข</span>
+          <h2>ระบบยังไม่สามารถออกเกียรติบัตรได้</h2>
+          <p>ต้องเรียนครบ 5 GI ทำข้อสอบครบทุกเส้นทาง คะแนนเฉลี่ยอย่างน้อย 80% และกดเข้าเกมของแต่ละเส้นทางก่อน</p>
+          <div class="inline-actions">
+            <a class="button button-primary" href="map.html">กลับไปเก็บความคืบหน้า</a>
+            <a class="button button-ghost" href="profile.html">ดูโปรไฟล์</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section print-keep certificate-showcase-stage">
+      <div class="certificate-showcase-stage-frame">
+        <article class="certificate-board" data-certificate-board hidden>
+          <div class="certificate-overlay">
+            <div class="certificate-name-banner">
+              <strong data-certificate-name></strong>
+            </div>
+            <p class="certificate-issued">ให้ไว้ ณ วันที่ <span data-certificate-date></span></p>
+          </div>
+        </article>
+      </div>
+
+      <div class="inline-actions certificate-actions" data-certificate-actions hidden>
+        <button class="button button-primary" type="button" data-download-certificate>พิมพ์เกียรติบัตร</button>
+        <a class="button button-ghost" href="profile.html">แสดงในโปรไฟล์</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer showcase-footer certificate-showcase-footer">
+    <div class="showcase-footer-grid">
+      <section class="showcase-footer-team">
+        <p class="showcase-overline">Certificate Export</p>
+        <h2>พร้อมพิมพ์หรือบันทึกเป็น PDF</h2>
+        <p class="certificate-footer-text">หน้าเกียรติบัตรถูกจัดให้พิมพ์ออกมาเฉพาะตัวเกียรติบัตร และยังคงพื้นหลังพร้อมตำแหน่งชื่อกับวันที่ตามแบบที่กำหนดไว้</p>
+      </section>
+
+      <section class="showcase-footer-brand">
+        <img class="showcase-footer-logo" src="assets/โลโก้ข้อความ2.png" alt="GI Songkhla Explorer">
+        <p>เมื่อเชื่อมต่อ Supabase แล้ว เกียรติบัตรและความคืบหน้าจะถูกผูกกับบัญชีผู้ใช้และดึงกลับมาแสดงได้ต่อเนื่อง</p>
+        <div class="showcase-footer-decor" aria-hidden="true">
+          <img class="showcase-footer-oldtown" src="assets/1.png" alt="">
+        </div>
+      </section>
+    </div>
+    <p class="footer-end">&copy; <span data-current-year></span> GI Songkhla Explorer</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/data.js"></script>
+  <script src="js/supabase.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/site.js"></script>
+  <script src="js/certificate-page.js"></script>
+</body>
+</html>

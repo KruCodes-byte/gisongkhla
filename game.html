@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>เปิดเกมภายนอก</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="map" data-auth-required="true">
+  <header class="site-header">
+    <a class="brand" href="index.html">GI Songkhla Explorer</a>
+    <nav class="site-nav">
+      <a href="index.html" data-nav="home">หน้าแรก</a>
+      <a href="map.html" data-nav="map">แผนที่</a>
+      <a href="about.html" data-nav="about">About</a>
+      <a href="certificate.html" data-nav="certificate">เกียรติบัตร</a>
+    </nav>
+    <a class="profile-chip" href="profile.html">
+      <span data-profile-name>โปรไฟล์</span>
+    </a>
+  </header>
+
+  <main class="page-shell">
+    <section class="hero">
+      <article class="district-hero">
+        <span class="eyebrow">External Game</span>
+        <h1 data-game-title></h1>
+        <p data-game-subtitle></p>
+        <div class="status-strip">
+          <div class="status-badge">
+            <span>การนับผลเกม</span>
+            <strong>นับแค่การกดเข้าเกม</strong>
+          </div>
+          <div class="status-badge">
+            <span>คะแนนเกม</span>
+            <strong>ไม่มีการเก็บคะแนน</strong>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <section class="section">
+      <article class="section-card">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">Game Launcher</span>
+            <h2>เปิดเกมที่อยู่นอกเว็บไซต์นี้</h2>
+          </div>
+        </div>
+        <p data-game-description></p>
+        <p data-game-requirement></p>
+        <div class="notice-banner" data-game-link-status hidden></div>
+        <div class="inline-actions">
+          <button class="button button-primary" type="button" data-open-external-game>เปิดเกมภายนอก</button>
+          <a class="button button-secondary" href="map.html" data-back-to-district>กลับหน้าข้อมูลอำเภอ</a>
+          <a class="button button-ghost" href="map.html">กลับหน้าแผนที่</a>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="page-shell">
+      <div class="footer-card">
+        <div>
+          <h3>การตั้งค่าลิงก์เกม</h3>
+          <p>หากต้องการให้ปุ่มนี้เปิดเกมจริง ให้ใส่ลิงก์เว็บเกมภายนอกของแต่ละ GI ไว้ใน js/data.js ที่ช่อง externalGameUrl หรือเปลี่ยน gameUrl ให้เป็นลิงก์จริง</p>
+        </div>
+        <div>
+          <p>ระบบนี้ไม่ดึงคะแนนจากเว็บเกมภายนอกมาเก็บ ใช้เฉพาะสถานะการกดเข้าเกมเป็นส่วนหนึ่งของเงื่อนไขเกียรติบัตร</p>
+        </div>
+      </div>
+      <p class="footer-end">© <span data-current-year></span> GI Songkhla Explorer</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/data.js"></script>
+  <script src="js/supabase.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/site.js"></script>
+  <script src="js/game-page.js"></script>
+</body>
+</html>
