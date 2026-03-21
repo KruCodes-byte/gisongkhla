@@ -111,6 +111,48 @@ button {
   border: 1px solid rgba(255, 255, 255, 0.15);
 }
 
+.site-nav-toggle {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.08);
+  color: #ffffff;
+  cursor: pointer;
+  transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+
+.site-nav-toggle:hover {
+  background: rgba(255, 255, 255, 0.14);
+  border-color: rgba(255, 255, 255, 0.24);
+}
+
+.site-nav-toggle span {
+  display: block;
+  width: 18px;
+  height: 2px;
+  margin: 2px 0;
+  border-radius: 999px;
+  background: currentColor;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.site-header.is-nav-open .site-nav-toggle span:nth-child(1) {
+  transform: translateY(6px) rotate(45deg);
+}
+
+.site-header.is-nav-open .site-nav-toggle span:nth-child(2) {
+  opacity: 0;
+}
+
+.site-header.is-nav-open .site-nav-toggle span:nth-child(3) {
+  transform: translateY(-6px) rotate(-45deg);
+}
+
 .page-shell {
   width: min(1180px, calc(100% - 32px));
   margin: 0 auto;
@@ -4256,6 +4298,326 @@ body[data-page="home"] {
 
   .map-screen-stats h1 {
     font-size: 1.7rem;
+  }
+}
+
+@media (max-width: 640px) {
+  html,
+  body {
+    overflow-x: hidden;
+  }
+
+  .site-header,
+  .map-screen-header {
+    position: sticky;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+  }
+
+  .brand,
+  .map-screen-title {
+    flex: 1 1 auto;
+    font-size: 18px;
+    min-width: 0;
+  }
+
+  .site-nav-toggle {
+    display: inline-flex;
+    flex: 0 0 auto;
+    margin-left: auto;
+  }
+
+  .site-header .profile-chip,
+  .map-screen-header .map-screen-profile.profile-chip {
+    display: none;
+  }
+
+  .site-nav,
+  .map-screen-header .map-screen-nav {
+    order: 3;
+    width: 100%;
+    margin-left: 0;
+    display: none;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+    padding: 12px;
+    border-radius: 18px;
+    background: rgba(6, 20, 36, 0.92);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 18px 30px rgba(5, 16, 28, 0.24);
+  }
+
+  .site-header.is-nav-open .site-nav,
+  .map-screen-header.is-nav-open .map-screen-nav {
+    display: flex;
+  }
+
+  .site-nav a,
+  .map-screen-header .map-screen-nav a,
+  .profile-chip,
+  .map-screen-profile.profile-chip {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    white-space: nowrap;
+    font-size: 13px;
+    padding: 9px 12px;
+  }
+
+  .site-header.is-nav-open .profile-chip,
+  .map-screen-header.is-nav-open .map-screen-profile.profile-chip {
+    display: inline-flex;
+    order: 4;
+    width: 100%;
+    margin-left: 0;
+    justify-content: flex-start;
+    border-radius: 18px;
+    background: rgba(6, 20, 36, 0.92);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 18px 30px rgba(5, 16, 28, 0.24);
+  }
+
+  .page-shell {
+    width: calc(100% - 16px);
+  }
+
+  .hero-actions,
+  .inline-actions,
+  .certificate-actions,
+  .certificate-empty-panel .inline-actions {
+    flex-direction: column;
+  }
+
+  .hero-actions .button,
+  .inline-actions .button,
+  .certificate-actions .button,
+  .certificate-empty-panel .inline-actions .button {
+    width: 100%;
+  }
+
+  .status-strip,
+  .map-screen-stats .status-strip,
+  .gi-action-card .status-strip {
+    grid-template-columns: 1fr;
+  }
+
+  .showcase-feature-grid,
+  .feature-grid,
+  .three-grid,
+  .summary-grid,
+  .route-grid,
+  .profile-layout,
+  .certificate-layout,
+  .district-layout,
+  .about-grid,
+  .gi-action-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .showcase-primary-tags {
+    gap: 8px;
+  }
+
+  .showcase-primary-tags span {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .district-product-top {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .district-product-visual {
+    min-height: 132px;
+  }
+
+  .district-product-visual img {
+    max-width: 118px;
+    max-height: 104px;
+  }
+
+  .district-map {
+    min-height: 360px;
+  }
+
+  .video-choice-row {
+    justify-content: flex-start;
+    width: 100%;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    padding-bottom: 2px;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .video-choice-row::-webkit-scrollbar {
+    display: none;
+  }
+
+  .video-choice-button {
+    flex: 0 0 auto;
+  }
+
+  .video-player-shell {
+    width: 100%;
+  }
+
+  .auth-panel-card .auth-tabs,
+  .auth-tabs {
+    flex-wrap: wrap;
+  }
+
+  .auth-tab {
+    flex: 1 1 calc(50% - 6px);
+  }
+
+  .showcase-footer-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .showcase-footer-team,
+  .showcase-footer-brand {
+    padding: 24px 20px;
+  }
+
+  .showcase-footer-logo {
+    width: min(260px, 78vw);
+  }
+
+  .map-stage-fullscreen {
+    min-height: 52vh;
+    height: 52vh;
+  }
+
+  .map-stage-fullscreen #songkhlaMapObject {
+    height: 52vh;
+  }
+}
+
+@media (max-width: 480px) {
+  .site-header,
+  .map-screen-header {
+    padding: 10px;
+  }
+
+  .brand,
+  .map-screen-title {
+    font-size: 17px;
+  }
+
+  .site-nav a,
+  .map-screen-header .map-screen-nav a,
+  .profile-chip,
+  .map-screen-profile.profile-chip {
+    padding: 8px 10px;
+    font-size: 12px;
+  }
+
+  .site-nav-toggle {
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+  }
+
+  .page-shell {
+    width: calc(100% - 12px);
+  }
+
+  .showcase-hero {
+    min-height: 500px;
+    padding: 36px 12px 120px;
+  }
+
+  .showcase-logo {
+    width: min(320px, 84vw);
+  }
+
+  .showcase-feature-card,
+  .hero-card,
+  .district-hero,
+  .section-card,
+  .panel,
+  .profile-card,
+  .empty-state,
+  .question-card {
+    padding: 18px;
+  }
+
+  .district-map {
+    min-height: 310px;
+  }
+
+  .district-map-callout-card {
+    min-width: 92px;
+    min-height: 72px;
+    padding: 8px;
+  }
+
+  .district-map-callout-logo {
+    width: min(88px, 100%);
+    max-height: 48px;
+  }
+
+  .showcase-npc-guide,
+  .map-page-npc,
+  .district-page-npc {
+    right: 8px;
+    bottom: 8px;
+  }
+
+  .showcase-npc-bubble {
+    max-width: 146px;
+    padding: 10px;
+    font-size: 0.8rem;
+  }
+
+  .showcase-npc-image {
+    width: 72px;
+  }
+
+  .map-screen-logo {
+    width: min(126px, 40vw);
+    margin: 8px 8px 0;
+  }
+
+  .map-stage-fullscreen {
+    min-height: 50vh;
+    height: 50vh;
+    margin: 0 8px;
+    border-radius: 20px;
+  }
+
+  .map-stage-fullscreen #songkhlaMapObject {
+    height: 50vh;
+  }
+
+  .map-screen-overlay {
+    padding: 14px;
+    border-radius: 18px;
+  }
+
+  .map-screen-stats,
+  .map-screen-routes {
+    margin: 0 8px;
+  }
+
+  .map-screen-stats h1 {
+    font-size: 1.45rem;
+  }
+
+  .certificate-board .certificate-name-banner {
+    width: 80%;
+    padding: 0 8px;
+  }
+
+  .certificate-board .certificate-issued {
+    max-width: 86%;
   }
 }
 

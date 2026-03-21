@@ -41,7 +41,7 @@
       videos: [
         {
           title: "สินค้า GI",
-          youtubeEmbed: "",
+          youtubeEmbed: "https://youtu.be/7owKwHgah5A?si=HlO4wsG5lEhS5jn_",
           description: "คลิปอธิบายจุดเด่นของปลากะพงสามน้ำทะเลสาบสงขลาและเหตุผลที่ได้รับการขึ้นทะเบียน GI",
         },
         {

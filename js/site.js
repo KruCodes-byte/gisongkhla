@@ -1,4 +1,77 @@
 (() => {
+  function initMobileMenus() {
+    document.querySelectorAll(".site-header").forEach((header, index) => {
+      const nav = header.querySelector(".site-nav");
+      if (!nav || header.querySelector(".site-nav-toggle")) {
+        return;
+      }
+
+      const navId = nav.id || `site-nav-${index + 1}`;
+      const profileChip = header.querySelector(".profile-chip");
+      const toggleButton = document.createElement("button");
+      const closeMenu = () => {
+        header.classList.remove("is-nav-open");
+        toggleButton.setAttribute("aria-expanded", "false");
+        toggleButton.setAttribute("aria-label", "Open menu");
+      };
+      const openMenu = () => {
+        header.classList.add("is-nav-open");
+        toggleButton.setAttribute("aria-expanded", "true");
+        toggleButton.setAttribute("aria-label", "Close menu");
+      };
+
+      nav.id = navId;
+      toggleButton.type = "button";
+      toggleButton.className = "site-nav-toggle";
+      toggleButton.setAttribute("aria-controls", navId);
+      toggleButton.setAttribute("aria-expanded", "false");
+      toggleButton.setAttribute("aria-label", "Open menu");
+      toggleButton.innerHTML = `
+        <span></span>
+        <span></span>
+        <span></span>
+      `;
+
+      nav.before(toggleButton);
+
+      toggleButton.addEventListener("click", () => {
+        if (header.classList.contains("is-nav-open")) {
+          closeMenu();
+          return;
+        }
+
+        openMenu();
+      });
+
+      nav.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", closeMenu);
+      });
+
+      if (profileChip) {
+        profileChip.addEventListener("click", closeMenu);
+      }
+
+      window.addEventListener("keydown", (event) => {
+        if (event.key === "Escape") {
+          closeMenu();
+        }
+      });
+
+      const desktopMedia = window.matchMedia("(min-width: 641px)");
+      const handleDesktopChange = (event) => {
+        if (event.matches) {
+          closeMenu();
+        }
+      };
+
+      if (typeof desktopMedia.addEventListener === "function") {
+        desktopMedia.addEventListener("change", handleDesktopChange);
+      } else if (typeof desktopMedia.addListener === "function") {
+        desktopMedia.addListener(handleDesktopChange);
+      }
+    });
+  }
+
   function getSharedFooterMarkup() {
     return `
       <footer class="site-footer showcase-footer">
@@ -135,6 +208,7 @@
   }
 
   window.SiteBoot = (async () => {
+    initMobileMenus();
     setActiveNav();
     ensureSharedFooter();
     bindFooterMeta();
