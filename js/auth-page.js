@@ -175,12 +175,8 @@
   async function handleGoogleAuth() {
     showStatus("");
     const result = await window.SupabaseService.signInWithGoogle({
-      function getGoogleRedirectUrl() {
-  const target = new URL("auth.html", window.location.href);
-  target.searchParams.set("mode", "login");
-  target.searchParams.set("next", getSafeNextPath());
-  return target.toString();
-});
+     redirectTo: getGoogleRedirectUrl(),
+    });
 
     if (!result.ok) {
       showStatus(result.error || "ไม่สามารถเริ่มการเข้าสู่ระบบด้วย Google ได้", "error");
