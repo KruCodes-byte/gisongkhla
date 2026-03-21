@@ -175,8 +175,10 @@
   async function handleGoogleAuth() {
     showStatus("");
     const result = await window.SupabaseService.signInWithGoogle({
-     redirectTo: getGoogleRedirectUrl(),
-    });
+     function getGoogleRedirectUrl() {
+  // เปลี่ยนจากแบบ relative มาแบบ absolute ของ production
+  return "https://gisongkhla.com/auth.html?mode=login&next=profile.html";
+}
 
     if (!result.ok) {
       showStatus(result.error || "ไม่สามารถเริ่มการเข้าสู่ระบบด้วย Google ได้", "error");
