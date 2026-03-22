@@ -2203,7 +2203,7 @@ body[data-page="auth"] {
 
 .certificate-board .certificate-name-banner {
   position: absolute;
-  top: 43.8%;
+  top: 41.1%;
   left: 50%;
   width: min(54%, 880px);
   margin: 0;
@@ -4159,7 +4159,7 @@ body[data-page="home"] {
   }
 
   .certificate-board .certificate-name-banner {
-    top: 43.5%;
+    top: 40.9%;
     width: 74%;
     padding: 0 10px;
   }
