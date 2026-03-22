@@ -101,7 +101,7 @@
 
           .certificate-print-name {
             position: absolute;
-            top: 43.8%;
+            top: 41.1%;
             left: 50%;
             width: min(54%, 880px);
             padding: 0 20px;
