@@ -2465,7 +2465,7 @@ body[data-page="home"] {
   padding: 44px max(48px, calc((100vw - 1180px) / 2));
   background:
     linear-gradient(90deg, rgba(220, 240, 255, 0.92) 0%, rgba(232, 244, 255, 0.78) 48%, rgba(240, 248, 255, 0.2) 100%),
-    url("assets/เรียนรู้สินค้าGIพื้นหลัง2.jpg") center/cover;
+    url("assets/เรียนรู้สินค้าGIพื้นหลัง225.jpg") center/cover;
 }
 
 .showcase-primary-copy {
