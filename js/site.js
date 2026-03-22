@@ -1,5 +1,7 @@
 (() => {
   const FAVICON_PATH = "assets/1.png";
+  const HEADER_LOGO_PATH = "assets/1.png";
+  const HEADER_LOGO_WIDTH = 72;
 
   function ensureFavicon() {
     let favicon = document.querySelector('link[rel="icon"]');
@@ -12,6 +14,31 @@
 
     favicon.type = "image/png";
     favicon.href = FAVICON_PATH;
+  }
+
+  function decorateSiteBrand() {
+    document.querySelectorAll(".brand").forEach((brand) => {
+      if (brand.querySelector(".brand-icon")) {
+        return;
+      }
+
+      const label = brand.textContent.trim() || "GI Songkhla Explorer";
+      const icon = document.createElement("img");
+      const text = document.createElement("span");
+
+      icon.className = "brand-icon";
+      icon.src = HEADER_LOGO_PATH;
+      icon.alt = "";
+      icon.width = HEADER_LOGO_WIDTH;
+      icon.setAttribute("aria-hidden", "true");
+      icon.decoding = "async";
+
+      text.className = "brand-text";
+      text.textContent = label;
+
+      brand.textContent = "";
+      brand.append(icon, text);
+    });
   }
 
   function initMobileMenus() {
@@ -224,6 +251,7 @@
 
   window.SiteBoot = (async () => {
     ensureFavicon();
+    decorateSiteBrand();
     initMobileMenus();
     setActiveNav();
     ensureSharedFooter();

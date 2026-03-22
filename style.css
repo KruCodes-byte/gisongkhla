@@ -76,7 +76,7 @@ button {
 .brand {
   display: inline-flex;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
   font-size: 22px;
   font-weight: 700;
   letter-spacing: 0.02em;
@@ -85,9 +85,11 @@ button {
 }
 
 .brand-icon {
-  width: 34px;
-  height: 34px;
-  flex: 0 0 34px;
+  width: 72px;
+  max-width: 72px;
+  height: auto;
+  flex: 0 0 auto;
+  object-fit: contain;
 }
 
 .brand-text {
@@ -4352,9 +4354,8 @@ body[data-page="home"] {
   }
 
   .brand-icon {
-    width: 28px;
-    height: 28px;
-    flex-basis: 28px;
+    width: 58px;
+    max-width: 58px;
   }
 
   .site-nav-toggle {
@@ -4547,9 +4548,8 @@ body[data-page="home"] {
   }
 
   .brand-icon {
-    width: 24px;
-    height: 24px;
-    flex-basis: 24px;
+    width: 48px;
+    max-width: 48px;
   }
 
   .site-nav a,
