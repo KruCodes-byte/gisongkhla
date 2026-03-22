@@ -134,7 +134,7 @@
 
           <section class="showcase-footer-brand">
             <img class="showcase-footer-logo" src="assets/ชื่อ.png" alt="GI Songkhla Explorer">
-            <p>นวัตกรรมเว็บไซต์สื่อประสมเชิงปฏิสัมพันธ์เพื่อการเรียนรู้และสื่อสารอัตลักษณ์สินค้า GI ของจังหวัดสงขลาในรูปแบบที่เข้าถึงง่ายขึ้น</p>
+            <p>นวัตกรรมเว็บไซต์สื่อประสมเชิงปฏิสัมพันธ์เพื่อการเรียนรู้และสืบสานภูมิปัญญาสิ่งบ่งชี้ทางภูมิศาสตร์จังหวัดสงขลา</p>
           </section>
         </div>
         <p class="footer-end">&copy; <span data-current-year></span> GI Songkhla Explorer</p>
