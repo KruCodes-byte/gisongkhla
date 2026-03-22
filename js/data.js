@@ -229,7 +229,7 @@
       accent: "#c56a1b",
       heroText: "เรียนรู้อาหารพื้นถิ่นจากภูมิปัญญาชาวประมงคาบสมุทรสทิงพระ",
       gameUrl: "game.html?district=ranot",
-      externalGameUrl: "https://krucodes-byte.github.io/game1/",
+      externalGameUrl: "",
       overview:
         "เส้นทางนี้พาผู้เรียนไปรู้จักไข่ครอบสงขลา อาหารพื้นถิ่น GI ของคาบสมุทรสทิงพระ ที่เกิดจากภูมิปัญญาการถนอมอาหารและวิถีชาวประมงรอบทะเลสาบสงขลา",
       history:
@@ -288,7 +288,7 @@
       districtName: "อำเภอหาดใหญ่",
       logo: "img/GIอำเภอหาดใหญ่.png",
       mapImage: "mapamper/อำเภอหาดใหญ่.svg",
-      accent: "#d86b16",
+      accent: "#0b5fa8",
       giSlugs: ["hat-yai"],
     },
     {
@@ -297,7 +297,7 @@
       districtName: "อำเภอจะนะ",
       logo: "img/GIอำเภอจะนะ.png",
       mapImage: "mapamper/อำเภอจะนะ.svg",
-      accent: "#2f8b57",
+      accent: "#0b5fa8",
       giSlugs: ["chana"],
     },
     {
@@ -306,7 +306,7 @@
       districtName: "อำเภอสิงหนคร",
       logo: "img/GIอำเภอสิงหนคร.png",
       mapImage: "mapamper/อำเภอสิงหนคร.svg",
-      accent: "#4c8e86",
+      accent: "#0b5fa8",
       giSlugs: ["sathing-phra", "ranot"],
     },
     {
@@ -315,7 +315,7 @@
       districtName: "อำเภอสทิงพระ",
       logo: "img/GIอำเภอสทิงพระ.png",
       mapImage: "mapamper/อำเภอสทิงพระ.svg",
-      accent: "#0a925f",
+      accent: "#0b5fa8",
       giSlugs: ["sathing-phra", "ranot"],
     },
     {
@@ -324,7 +324,7 @@
       districtName: "อำเภอระโนด",
       logo: "img/GIอำเภอระโนด.png",
       mapImage: "mapamper/อำเภอระโนด.svg",
-      accent: "#c56a1b",
+      accent: "#0b5fa8",
       giSlugs: ["sathing-phra", "ranot"],
     },
     {
@@ -333,7 +333,7 @@
       districtName: "อำเภอกระแสสินธุ์",
       logo: "img/GIอำเภอกระแสสินธุ์.png",
       mapImage: "",
-      accent: "#3f9a7a",
+      accent: "#0b5fa8",
       giSlugs: ["sathing-phra", "ranot"],
     },
   ];

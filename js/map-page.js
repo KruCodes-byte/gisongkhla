@@ -287,6 +287,32 @@
     }
   }
 
+  function setTooltipContent(title, body, imageSrc = "", imageAlt = "") {
+    const tooltipTitle = document.querySelector("[data-tooltip-title]");
+    const tooltipBody = document.querySelector("[data-tooltip-body]");
+    const tooltipImage = document.querySelector("[data-tooltip-image]");
+
+    if (tooltipTitle) {
+      tooltipTitle.textContent = title;
+    }
+
+    if (tooltipBody) {
+      tooltipBody.textContent = body;
+    }
+
+    if (tooltipImage) {
+      if (imageSrc) {
+        tooltipImage.src = imageSrc;
+        tooltipImage.alt = imageAlt || title;
+        tooltipImage.hidden = false;
+      } else {
+        tooltipImage.removeAttribute("src");
+        tooltipImage.alt = "";
+        tooltipImage.hidden = true;
+      }
+    }
+  }
+
   function clearSuppressTimer() {
     if (mapState.suppressTimer) {
       window.clearTimeout(mapState.suppressTimer);
@@ -371,9 +397,6 @@
 
   function attachMapInteractions(svgDocument) {
     const tooltip = document.querySelector("[data-map-tooltip]");
-    const tooltipTitle = document.querySelector("[data-tooltip-title]");
-    const tooltipBody = document.querySelector("[data-tooltip-body]");
-    const tooltipImage = document.querySelector("[data-tooltip-image]");
     const interactiveIds = new Set(window.SongkhlaData.districts.map((district) => district.svgId));
 
     window.SongkhlaData.districts.forEach((district) => {
@@ -399,10 +422,12 @@
 
         setShapeColor(group, "#f59f1a", "1");
         tooltip.hidden = false;
-        tooltipTitle.textContent = district.districtName;
-        tooltipBody.textContent = `${status.label} ${status.progressPercent}% · GI ${status.total} รายการ · คะแนน ${status.scoreEarned}/${status.scorePossible}`;
-        tooltipImage.src = district.logo || "";
-        tooltipImage.alt = district.districtName;
+        setTooltipContent(
+          district.districtName,
+          `${status.label} ${status.progressPercent}% · GI ${status.total} รายการ · คะแนน ${status.scoreEarned}/${status.scorePossible}`,
+          district.logo || "",
+          district.districtName
+        );
       });
 
       group.addEventListener("mousemove", (event) => {
@@ -451,10 +476,7 @@
         }
 
         tooltip.hidden = false;
-        tooltipTitle.textContent = district.districtName;
-        tooltipBody.textContent = "กำลังเตรียมบทเรียนอำเภอนี้";
-        tooltipImage.removeAttribute("src");
-        tooltipImage.alt = district.districtName;
+        setTooltipContent(district.districtName, "ไม่มีสินค้า GI");
       });
 
       group.addEventListener("mousemove", (event) => {
