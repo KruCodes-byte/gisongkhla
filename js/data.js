@@ -257,7 +257,7 @@
       videos: [
         {
           title: "สินค้า GI",
-          youtubeEmbed: "https://youtu.be/7owKwHgah5A?si=HlO4wsG5lEhS5jn_",
+          youtubeEmbed: "https://youtu.be/vZLjo6GdT9Q?si=e43pAC1iHNt3sepq",
           description: "คลิปอธิบายขั้นตอนทำไข่ครอบสงขลาและลักษณะเด่นของสินค้า GI ชนิดนี้",
         },
         {
