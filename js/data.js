@@ -41,7 +41,7 @@
       videos: [
         {
           title: "สินค้า GI",
-          youtubeEmbed: "https://youtu.be/7owKwHgah5A?si=HlO4wsG5lEhS5jn_",
+          youtubeEmbed: "https://youtu.be/xHKAf1U2NjQ?si=vgUFoCqJ0CtBWgyj",
           description: "คลิปอธิบายจุดเด่นของปลากะพงสามน้ำทะเลสาบสงขลาและเหตุผลที่ได้รับการขึ้นทะเบียน GI",
         },
         {
@@ -95,7 +95,7 @@
       videos: [
         {
           title: "สินค้า GI",
-          youtubeEmbed: "",
+          youtubeEmbed: "https://youtu.be/WvR446Zne0Y?si=WawW1ahgZgBuJ5hR",
           description: "คลิปอธิบายลักษณะเด่นของส้มโอหอมควนลัง ทั้งสีเนื้อ กลิ่น และรสชาติ",
         },
         {
@@ -203,7 +203,7 @@
       videos: [
         {
           title: "สินค้า GI",
-          youtubeEmbed: "",
+          youtubeEmbed: "https://youtu.be/2pBc8Ywt6h0?si=79SOTXQqyN7X8--U",
           description: "คลิปอธิบายลักษณะเด่นของมะม่วงเบาสงขลา ทั้งผลสดและผลิตภัณฑ์แปรรูป",
         },
         {
@@ -229,7 +229,7 @@
       accent: "#c56a1b",
       heroText: "เรียนรู้อาหารพื้นถิ่นจากภูมิปัญญาชาวประมงคาบสมุทรสทิงพระ",
       gameUrl: "game.html?district=ranot",
-      externalGameUrl: "https://krucodes-byte.github.io/game1/",
+      externalGameUrl: "",
       overview:
         "เส้นทางนี้พาผู้เรียนไปรู้จักไข่ครอบสงขลา อาหารพื้นถิ่น GI ของคาบสมุทรสทิงพระ ที่เกิดจากภูมิปัญญาการถนอมอาหารและวิถีชาวประมงรอบทะเลสาบสงขลา",
       history:
