@@ -13,7 +13,7 @@
       accent: "#0b5fa8",
       heroText: "เรียนรู้วิถีเกาะยอและคุณค่าของปลากะพงขาวจากระบบนิเวศสามน้ำ",
       gameUrl: "game.html?district=mueang-songkhla",
-      externalGameUrl: "",
+      externalGameUrl: "https://krucodes-byte.github.io/game2.1/",
       overview:
         "เส้นทางนี้พาผู้เรียนไปรู้จักปลากะพงสามน้ำทะเลสาบสงขลา สินค้า GI เด่นของพื้นที่เกาะยอ อำเภอเมืองสงขลา ที่สะท้อนความสัมพันธ์ระหว่างคน ทะเลสาบ และภูมิปัญญาการเลี้ยงปลาในแหล่งน้ำธรรมชาติพิเศษ",
       history:
