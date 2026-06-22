@@ -304,6 +304,51 @@
     return null;
   }
 
+  async function recordSiteVisit(visitorId, page) {
+    if (!client) {
+      return null;
+    }
+
+    try {
+      await client.from("site_visits").insert([
+        {
+          visitor_id: visitorId,
+          page,
+        },
+      ]);
+    } catch (error) {
+      console.warn("Unable to record site visit.", error);
+    }
+
+    return null;
+  }
+
+  async function getSiteStats() {
+    if (!client) {
+      return null;
+    }
+
+    try {
+      const [visitResult, learnerResult] = await Promise.all([
+        client.from("public_site_stats").select("visitors").maybeSingle(),
+        client.from("public_learning_stats").select("learners").maybeSingle(),
+      ]);
+
+      if (visitResult.error || learnerResult.error) {
+        console.warn("Site stats query error", visitResult.error || learnerResult.error);
+        return null;
+      }
+
+      return {
+        visitors: visitResult.data?.visitors || 0,
+        learners: learnerResult.data?.learners || 0,
+      };
+    } catch (error) {
+      console.warn("Unable to fetch site stats.", error);
+      return null;
+    }
+  }
+
   async function logout() {
     if (!client) {
       return;
@@ -329,6 +374,8 @@
     saveProfile,
     saveRouteProgress,
     saveCertificate,
+    recordSiteVisit,
+    getSiteStats,
     logout,
   };
 })();

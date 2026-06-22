@@ -49,7 +49,7 @@
     if (!targetUrl) {
       openButton.disabled = true;
       showStatus("ยังไม่ได้ตั้งค่าลิงก์เกมภายนอกของ GI นี้ใน js/data.js", "error");
-      return { targetUrl: "" };
+      return { targetUrl: "https://krucodes-byte.github.io/game1/" };
     }
 
     openButton.disabled = false;
