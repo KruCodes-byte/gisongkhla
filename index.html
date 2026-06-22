@@ -16,6 +16,7 @@
     <nav class="site-nav">
       <a href="index.html" data-nav="home">หน้าแรก</a>
       <a href="map.html" data-nav="map">แผนที่</a>
+      <a href="shop.html" data-nav="shop">ร้านค้า</a>
       <a href="about.html" data-nav="about">About</a>
       <a href="certificate.html" data-nav="certificate">เกียรติบัตร</a>
     </nav>
@@ -25,13 +26,42 @@
   </header>
 
   <main class="showcase-shell">
-    <section class="showcase-hero">
+    <section class="showcase-hero home-hero">
       <div class="showcase-hero-center">
-        <img class="showcase-logo" src="assets/โลโก้ข้อความ2.png" alt="GI Songkhla Explorer">
-        <p class="showcase-hero-caption">เรียนรู้ผ่านการผจญภัยในโลกเกม</p>
-        <a class="button button-primary showcase-hero-button" href="map.html">เริ่มต้นการผจญภัย</a>
+        <h1>
+          <img src="assets/โลโก้ข้อความ2.png" alt="GI Songkhla Explorer" />
+        </h1>
+        <p class="showcase-hero-caption">นวัตกรรมเว็บไซต์สื่อประสมเชิงปฏิสัมพันธ์เพื่อการเรียนรู้และสืบสานภูมิปัญญาสิ่งบ่งชี้ทางภูมิศาสตร์จังหวัดสงขลา</p>
+        <div class="hero-actions">
+          <a class="button button-primary showcase-hero-button" href="map.html">เริ่มต้นการเรียนรู้</a>
+          <a class="button button-secondary showcase-hero-button" href="shop.html">สั่งซื้อ</a>
+        </div>
       </div>
+    </section>
 
+    <section class="statistics-section">
+      <div class="statistics-header">
+        <h2>ข้อมูลสถิติปีการศึกษา 2569</h2>
+        <span class="statistics-line"></span>
+      </div>
+      <div class="statistics-grid">
+        <article class="statistics-card">
+          <strong class="statistics-number" data-home-visitors>00</strong>
+          <span class="statistics-label">จำนวนผู้เข้าชมจริง</span>
+        </article>
+        <article class="statistics-card">
+          <strong class="statistics-number" data-home-learners>00</strong>
+          <span class="statistics-label">จำนวนผู้เรียนจริง</span>
+        </article>
+        <article class="statistics-card">
+          <strong class="statistics-number" data-home-shops>00</strong>
+          <span class="statistics-label">จำนวนร้านค้า</span>
+        </article>
+        <article class="statistics-card">
+          <strong class="statistics-number" data-home-categories>00</strong>
+          <span class="statistics-label">จำนวนหมวดหมู่</span>
+        </article>
+      </div>
     </section>
 
     <section class="showcase-features">
@@ -59,45 +89,51 @@
       </div>
     </section>
 
-    <section class="showcase-primary">
-      <div class="showcase-primary-copy">
-        <p class="showcase-overline"></p>
-        <h2>เรียนรู้สินค้า GI จังหวัดสงขลา</h2>
-        <p>ผู้เล่นจะได้สำรวจวัฒนธรรม อาหาร และภูมิปัญญาท้องถิ่น ผ่านข้อมูลอำเภอ วิดีโอ จุดสำคัญบนแผนที่ และแบบทดสอบ 10 ข้อในแต่ละเส้นทาง</p>
-        <div class="showcase-primary-tags">
-          <span>ประวัติ</span>
-          <span>ความสำคัญ</span>
-          <span>แหล่งผลิต</span>
-          <span>วิดีโอการเรียนรู้</span>
+    <section class="home-products">
+      <div class="section-head">
+        <div>
+          <p class="showcase-overline">Latest Products</p>
+          <h2>สินค้าแนะนำ</h2>
         </div>
+      </div>
+      <div class="product-grid">
+        <article class="product-card">
+          <div class="product-image"></div>
+          <h3>ส้มโอควนลัง</h3>
+          <a class="button button-ghost" href="https://www.facebook.com/share/1HUczHVp7b/?mibextid=wwXIfr">ร้านค้า</a>
+        </article>
+        <article class="product-card">
+          <div class="product-image"></div>
+          <h3>Short-Sleeved Shirts</h3>
+          <a class="button button-ghost" href="shop.html">ร้านค้า</a>
+        </article>
+        <article class="product-card">
+          <div class="product-image"></div>
+          <h3>Short-Sleeved Shirts</h3>
+          <a class="button button-ghost" href="shop.html">ร้านค้า</a>
+        </article>
       </div>
     </section>
 
-    <section class="showcase-secondary">
-      <div class="showcase-secondary-preview" aria-hidden="true">
-        <div class="showcase-preview-card">
-          <span class="showcase-preview-label">Quest Board</span>
-          <strong>Adventure Flow</strong>
-          <div class="showcase-preview-steps">
-            <span>Map</span>
-            <span>GI</span>
-            <span>Quiz</span>
-            <span>Cert</span>
+    <section class="home-categories">
+      <div class="category-layout">
+        <div class="category-card-preview">
+          <div class="category-image-block">
+            <img src="assets/ผจญภัยในเกม6.jpg" alt="กราฟิกแนะนำ" loading="lazy" />
           </div>
-          <div class="showcase-preview-track"></div>
+        </div>
+        <div class="category-video">
+          <div class="video-wrapper">
+            <iframe
+              src="https://www.youtube.com/embed/OaOZeb78ils?si=TqWlWj5y08xArUln"
+              title="วิดีโอแนะนำ"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
         </div>
       </div>
-      <div class="showcase-secondary-copy">
-        <p class="showcase-overline"></p>
-        <h2>ผจญภัยในโลกเกม RPG</h2>
-        <p>ตัวละครเดินทางสำรวจแผนที่ เก็บไอเท็ม และตอบคำถาม เพื่อเพิ่มพูนความรู้เกี่ยวกับ Soft Power ของสงขลา โดยหน้าเว็บนี้ทำหน้าที่เป็นจุดเริ่มต้นก่อนกดเข้าเกมภายนอก</p>
-      </div>
-    </section>
-
-    <section class="showcase-cta">
-      <p class="showcase-overline"></p>
-      <h2>พร้อมเริ่มการผจญภัยแล้วหรือยัง?</h2>
-      <a class="button button-primary" href="map.html">เริ่มเล่นเกมตอนนี้</a>
     </section>
   </main>
 

@@ -33,6 +33,25 @@ create table if not exists public.certificates (
   updated_at timestamptz default now()
 );
 
+create table if not exists public.site_visits (
+  id bigint generated always as identity primary key,
+  visitor_id text not null,
+  page text not null,
+  visited_at timestamptz default now()
+);
+
+create view if not exists public.public_site_stats as
+select count(distinct visitor_id) as visitors
+from public.site_visits;
+
+create view if not exists public.public_learning_stats as
+select count(distinct user_id) as learners
+from public.gi_progress
+where learning_started = true;
+
+alter table public.site_visits enable row level security;
+alter view public.public_site_stats enable row level security;
+alter view public.public_learning_stats enable row level security;
 alter table public.profiles enable row level security;
 alter table public.gi_progress enable row level security;
 alter table public.certificates enable row level security;
@@ -75,3 +94,27 @@ create policy "certificates_upsert_own"
   for all
   using (auth.uid() = user_id)
   with check (auth.uid() = user_id);
+
+drop policy if exists "site_visits_insert_public" on public.site_visits;
+create policy "site_visits_insert_public"
+  on public.site_visits
+  for insert
+  with check (auth.role() = 'anon' or auth.uid() is not null);
+
+drop policy if exists "site_visits_select_public" on public.site_visits;
+create policy "site_visits_select_public"
+  on public.site_visits
+  for select
+  using (auth.role() = 'anon' or auth.uid() is not null);
+
+drop policy if exists "public_site_stats_select" on public.public_site_stats;
+create policy "public_site_stats_select"
+  on public.public_site_stats
+  for select
+  using (auth.role() = 'anon' or auth.uid() is not null);
+
+drop policy if exists "public_learning_stats_select" on public.public_learning_stats;
+create policy "public_learning_stats_select"
+  on public.public_learning_stats
+  for select
+  using (auth.role() = 'anon' or auth.uid() is not null);
