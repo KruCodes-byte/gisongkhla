@@ -229,7 +229,7 @@
       accent: "#c56a1b",
       heroText: "เรียนรู้อาหารพื้นถิ่นจากภูมิปัญญาชาวประมงคาบสมุทรสทิงพระ",
       gameUrl: "game.html?district=ranot",
-      externalGameUrl: "",
+      externalGameUrl: "https://krucodes-byte.github.io/game1/",
       overview:
         "เส้นทางนี้พาผู้เรียนไปรู้จักไข่ครอบสงขลา อาหารพื้นถิ่น GI ของคาบสมุทรสทิงพระ ที่เกิดจากภูมิปัญญาการถนอมอาหารและวิถีชาวประมงรอบทะเลสาบสงขลา",
       history:
