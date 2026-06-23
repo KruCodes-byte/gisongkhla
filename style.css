@@ -194,6 +194,15 @@ button {
   padding: 64px 0 32px;
 }
 
+/* Limit hero logo size so it doesn't dominate the layout */
+.showcase-hero h1 img {
+  width: min(360px, 100%);
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  object-fit: contain;
+}
+
 .hero-grid {
   display: grid;
   grid-template-columns: minmax(0, 1.25fr) minmax(300px, 0.8fr);
@@ -2538,6 +2547,8 @@ body[data-page="home"] {
 
 .category-card-preview {
   padding: 0;
+  display: grid;
+  place-items: center;
 }
 
 .social-card {
@@ -2658,6 +2669,12 @@ body[data-page="home"] {
   min-height: 420px;
 }
 
+/* Make the clip/category preview image (next to the video) use a 1:2 aspect ratio */
+.home-categories .category-image-block img {
+  aspect-ratio: 2/1;
+  min-height: auto;
+}
+
 .category-grid {
   grid-template-columns: repeat(4, minmax(0, 1fr));
 }
@@ -2680,6 +2697,21 @@ body[data-page="home"] {
   min-height: 210px;
   border-radius: 20px;
   background: linear-gradient(180deg, #e4ecf7 0%, #d9e4f3 100%);
+}
+
+.product-image img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  border-radius: 20px;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+}
+
+/* Make homepage recommended product blocks square (1:1) without changing category images */
+.home-products .product-image {
+  aspect-ratio: 1/1;
+  min-height: auto;
 }
 
 .product-card h3,
@@ -2798,7 +2830,7 @@ body[data-page="home"] {
   display: block;
   border-radius: 22px;
   margin-bottom: 24px;
-  aspect-ratio: 16/10;
+  aspect-ratio: 1/1;
   object-fit: cover;
 }
 
