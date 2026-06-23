@@ -2075,7 +2075,7 @@ body[data-page="auth"] {
   aspect-ratio: 1.414 / 1;
   padding: clamp(18px, 2vw, 28px);
   border-radius: 32px;
-  background: url("assets/เกียรติบัตรเว็บไซต์6.jpg") center/cover no-repeat;
+  background: url("assets/เกียรติบัตรเว็บไซต์6.png") center/cover no-repeat;
   box-shadow: var(--shadow);
 }
 
@@ -2203,7 +2203,7 @@ body[data-page="auth"] {
 .certificate-board {
   padding: 0;
   border: none;
-  background: url("assets/เกียรติบัตรเว็บไซต์6.jpg") center/cover no-repeat;
+  background: url("assets/เกียรติบัตรเว็บไซต์6.png") center/cover no-repeat;
 }
 
 .certificate-overlay {

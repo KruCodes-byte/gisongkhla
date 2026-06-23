@@ -56,7 +56,7 @@
     const safeName = escapeHtml(name);
     const safeDate = escapeHtml(dateText);
     const baseHref = escapeHtml(new URL(".", window.location.href).href);
-    const backgroundSrc = escapeHtml(new URL("assets/เกียรติบัตรเว็บไซต์6", window.location.href).href);
+    const backgroundSrc = escapeHtml(new URL("assets/เกียรติบัตรเว็บไซต์5.png", window.location.href).href);
 
     return `
       <!DOCTYPE html>
