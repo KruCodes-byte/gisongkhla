@@ -67,7 +67,7 @@
       accent: "#d86b16",
       heroText: "เรียนรู้ผลไม้พื้นเมืองชื่อดังของควนลังที่มีกลิ่นหอมและไม่มีเมล็ด",
       gameUrl: "game.html?district=hat-yai",
-      externalGameUrl: "",
+      externalGameUrl: "https://krucodes-byte.github.io/game4/",
       overview:
         "เส้นทางนี้พาผู้เรียนรู้จักส้มโอหอมควนลัง ผลไม้ GI สำคัญของอำเภอหาดใหญ่ที่โดดเด่นทั้งด้านพันธุ์พื้นเมือง รสชาติ และภูมิปัญญาการขยายพันธุ์ด้วยการตอนกิ่ง",
       history:
@@ -121,7 +121,7 @@
       accent: "#2f8b57",
       heroText: "สำรวจผลไม้ประจำถิ่นจะนะที่มีกลิ่นหอมเฉพาะตัวและมีประวัติยาวนาน",
       gameUrl: "game.html?district=chana",
-      externalGameUrl: "",
+      externalGameUrl: "https://krucodes-byte.github.io/game4/",
       overview:
         "เส้นทางนี้พาผู้เรียนรู้จักส้มจุกจะนะ ผลไม้ GI ที่เป็นเอกลักษณ์ของอำเภอจะนะ ทั้งในฐานะของฝากชื่อดัง ผลผลิตทางการเกษตรสำคัญ และมรดกทางวัฒนธรรมของพื้นที่",
       history:
@@ -175,7 +175,7 @@
       accent: "#0a925f",
       heroText: "เรียนรู้ผลไม้อัตลักษณ์ของคาบสมุทรสทิงพระที่ปลูกและแปรรูปได้ตลอดปี",
       gameUrl: "game.html?district=sathing-phra",
-      externalGameUrl: "",
+      externalGameUrl: "https://krucodes-byte.github.io/game3/",
       overview:
         "เส้นทางนี้ชวนผู้เรียนรู้จักมะม่วงเบาสงขลา ผลไม้อัตลักษณ์ของคาบสมุทรสทิงพระที่มีประวัติยาวนานกว่า 100 ปี และต่อยอดได้ทั้งผลสดและผลิตภัณฑ์แปรรูป",
       history:
