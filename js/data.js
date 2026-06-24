@@ -149,7 +149,7 @@
       videos: [
         {
           title: "สินค้า GI",
-          youtubeEmbed: "",
+          youtubeEmbed: "https://youtu.be/9uGJD8Z7gr0?si=Mzrasddh_Y8ioOlK",
           description: "คลิปอธิบายลักษณะเด่นของส้มจุกจะนะ ทั้งขั้วผลมีจุก เปลือกล่อน และกลิ่นหอมเฉพาะ",
         },
         {
